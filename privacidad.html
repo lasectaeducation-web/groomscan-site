@@ -16,25 +16,53 @@ hr{border:0}footer{text-align:center;color:var(--smoke);font-size:14px;padding:2
 <hr />
 <h2>English</h2>
 <h3>1. Who we are</h3>
-<p>GroomScan ("the App", "we") is provided by <strong>Juan Antonio Cachazo Prieto (NIF 04231555S), Cedillo del Condado (Toledo), España</strong>, contact: <strong>hola@groomscan.com</strong>. For the data described below we act as:
-- <strong>Controller</strong> of merchant account data (section 3.1).
-- <strong>Processor on behalf of the merchant</strong> for data from the merchant's store visitors (section 3.2). The merchant is the controller for its shoppers.</p>
+<p>GroomScan ("the App", "we") is provided by <strong>Juan Antonio Cachazo Prieto (NIF 04231555S), Cedillo del Condado (Toledo), España</strong>, contact: <strong>hola@groomscan.com</strong>. For the data described below we act as:</p>
+<ul>
+<li>
+<p><strong>Controller</strong> of merchant account data (section 3.1).</p>
+</li>
+<li>
+<p><strong>Processor on behalf of the merchant</strong> for data from the merchant's store visitors (section 3.2). The merchant is the controller for its shoppers.</p>
+</li>
+</ul>
 <h3>2. What GroomScan does</h3>
 <p>Merchants add a widget to their Shopify store. A shopper may upload a photo of a hairstyle. The App analyses the photo and recommends products from that merchant's catalogue.</p>
 <h3>3. Data we process</h3>
-<p><strong>3.1 Merchants (installing the App)</strong>
-- Shop domain (<code>*.myshopify.com</code>), shop name, primary domain and store currency.
-- Whether the store is a development store, the selected plan and the Shopify subscription ID.
-- An app key that identifies the store in our service, and the onboarding steps the merchant ticked.
-- Shopify access tokens needed to run the App (stored encrypted at rest by our host and used only for the App).
-- Aggregate usage (number of scans per period).
+<p><strong>3.1 Merchants (installing the App)</strong></p>
+<ul>
+<li>
+<p>Shop domain (<code>*.myshopify.com</code>), shop name, primary domain and store currency.</p>
+</li>
+<li>
+<p>Whether the store is a development store, the selected plan and the Shopify subscription ID.</p>
+</li>
+<li>
+<p>An app key that identifies the store in our service, and the onboarding steps the merchant ticked.</p>
+</li>
+<li>
+<p>Shopify access tokens needed to run the App (stored encrypted at rest by our host and used only for the App).</p>
+</li>
+<li>
+<p>Aggregate usage (number of scans per period).
 We do <strong>not</strong> access orders, customers or other Admin data: the App requests no Shopify Admin API access scopes.</p>
-<p><strong>3.2 Shoppers (store visitors using the widget)</strong>
-- <strong>Photo:</strong> sent only after the shopper ticks the consent box. It is processed in memory to estimate hairstyle parameters (style, texture, hold, finish, volume) and choose products, and then <strong>discarded. Photos are never stored</strong> by GroomScan or by the app.
-- <strong>Random device identifier:</strong> a random value created in the shopper's browser (<code>localStorage</code>, key <code>gs_device</code>) to apply fair-use limits (scans per user). It does not contain names, emails or any information from the shopper's Shopify account.
-- <strong>Scan log:</strong> date and time, store, the random device identifier, language, the estimated hairstyle parameters and the products recommended. Used for usage limits, billing per plan, service quality and aggregate reports to the merchant. It contains no photo, name, email, address or payment data.
-- The widget also uses <code>sessionStorage</code> to remember that the automatic popup was already shown.
+</li>
+</ul>
+<p><strong>3.2 Shoppers (store visitors using the widget)</strong></p>
+<ul>
+<li>
+<p><strong>Photo:</strong> sent only after the shopper ticks the consent box. It is processed in memory to estimate hairstyle parameters (style, texture, hold, finish, volume) and choose products, and then <strong>discarded. Photos are never stored</strong> by GroomScan or by the app.</p>
+</li>
+<li>
+<p><strong>Random device identifier:</strong> a random value created in the shopper's browser (<code>localStorage</code>, key <code>gs_device</code>) to apply fair-use limits (scans per user). It does not contain names, emails or any information from the shopper's Shopify account.</p>
+</li>
+<li>
+<p><strong>Scan log:</strong> date and time, store, the random device identifier, language, the estimated hairstyle parameters and the products recommended. Used for usage limits, billing per plan, service quality and aggregate reports to the merchant. It contains no photo, name, email, address or payment data.</p>
+</li>
+<li>
+<p>The widget also uses <code>sessionStorage</code> to remember that the automatic popup was already shown.
 We do <strong>not</strong> collect Shopify customer data (names, emails, addresses, orders) and do not use shopper data for advertising or to build profiles across stores.</p>
+</li>
+</ul>
 <h3>4. Purposes and legal bases (GDPR)</h3>
 <div class=t><table>
 <thead>
@@ -110,10 +138,18 @@ We do <strong>not</strong> collect Shopify customer data (names, emails, address
 </table></div>
 <h3>6. Retention</h3>
 <ul>
-<li>Photos: not retained (deleted right after analysis).</li>
-<li>Scan logs: 12 months, then deleted or aggregated anonymously.</li>
-<li>Merchant data: while the App is installed. When a merchant uninstalls, sessions are deleted immediately and all shop data is deleted when Shopify sends the <code>shop/redact</code> request (48 hours after uninstall).</li>
-<li>Billing records: as required by tax law.</li>
+<li>
+<p>Photos: not retained (deleted right after analysis).</p>
+</li>
+<li>
+<p>Scan logs: 12 months, then deleted or aggregated anonymously.</p>
+</li>
+<li>
+<p>Merchant data: while the App is installed. When a merchant uninstalls, sessions are deleted immediately and all shop data is deleted when Shopify sends the <code>shop/redact</code> request (48 hours after uninstall).</p>
+</li>
+<li>
+<p>Billing records: as required by tax law.</p>
+</li>
 </ul>
 <h3>7. Shopify privacy requests</h3>
 <p>We implement Shopify's mandatory privacy webhooks: <code>customers/data_request</code> and <code>customers/redact</code> (we hold no Shopify customer data, so there is nothing to export or erase; requests are logged) and <code>shop/redact</code> (all shop data is deleted).</p>
@@ -133,12 +169,22 @@ We do <strong>not</strong> collect Shopify customer data (names, emails, address
 <p>El comerciante añade un widget a su tienda Shopify. El cliente puede subir una foto de un peinado; la App la analiza y recomienda productos del catálogo de esa tienda.</p>
 <h3>3. Datos que tratamos</h3>
 <p><strong>Comerciantes:</strong> dominio y nombre de la tienda, dominio principal, moneda, si es tienda de desarrollo, plan e ID de suscripción, clave de la App, pasos del onboarding, tokens de acceso de Shopify necesarios para la App y uso agregado. No accedemos a pedidos ni clientes: la App no pide scopes de la Admin API.</p>
-<p><strong>Clientes de la tienda:</strong>
-- <strong>Foto:</strong> solo se envía si el cliente marca la casilla de consentimiento. Se procesa en memoria para estimar parámetros del peinado (estilo, textura, fijación, acabado, volumen) y elegir productos, y después <strong>se descarta. Las fotos no se guardan nunca.</strong>
-- <strong>Identificador aleatorio del dispositivo:</strong> un valor aleatorio creado en el navegador (<code>localStorage</code>, clave <code>gs_device</code>) para aplicar límites de uso. No contiene nombre, email ni datos de la cuenta del cliente.
-- <strong>Registro del escaneo:</strong> fecha y hora, tienda, identificador aleatorio, idioma, parámetros estimados del peinado y productos recomendados. Sin foto, nombre, email, dirección ni datos de pago.
-- <code>sessionStorage</code> para recordar que el popup automático ya se mostró.
+<p><strong>Clientes de la tienda:</strong></p>
+<ul>
+<li>
+<p><strong>Foto:</strong> solo se envía si el cliente marca la casilla de consentimiento. Se procesa en memoria para estimar parámetros del peinado (estilo, textura, fijación, acabado, volumen) y elegir productos, y después <strong>se descarta. Las fotos no se guardan nunca.</strong></p>
+</li>
+<li>
+<p><strong>Identificador aleatorio del dispositivo:</strong> un valor aleatorio creado en el navegador (<code>localStorage</code>, clave <code>gs_device</code>) para aplicar límites de uso. No contiene nombre, email ni datos de la cuenta del cliente.</p>
+</li>
+<li>
+<p><strong>Registro del escaneo:</strong> fecha y hora, tienda, identificador aleatorio, idioma, parámetros estimados del peinado y productos recomendados. Sin foto, nombre, email, dirección ni datos de pago.</p>
+</li>
+<li>
+<p><code>sessionStorage</code> para recordar que el popup automático ya se mostró.
 No recogemos datos de clientes de Shopify ni usamos los datos para publicidad o para crear perfiles entre tiendas.</p>
+</li>
+</ul>
 <h3>4. Finalidades y bases legales (RGPD)</h3>
 <p>Prestación del servicio y cobro: ejecución del contrato (art. 6.1.b). Análisis de la foto: consentimiento del cliente en el widget (art. 6.1.a), por cuenta del comerciante. Límites de uso, seguridad y calidad: interés legítimo (art. 6.1.f). Obligaciones legales y fiscales (art. 6.1.c). No se realiza identificación biométrica ni reconocimiento facial.</p>
 <h3>5. Subencargados</h3>
