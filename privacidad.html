@@ -1,0 +1,158 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacidad · GroomScan</title><meta name="description" content="Política de privacidad de GroomScan.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0E0E0E;--bone:#F4F1EC;--ember:#E4572E;--smoke:#6B665F;--line:rgba(14,14,14,.14)}
+*{box-sizing:border-box}body{margin:0;background:var(--bone);color:var(--ink);font:400 16px/1.65 Inter,system-ui,sans-serif}
+header{background:var(--ink);color:var(--bone);padding:18px 16px}header a{color:var(--bone);text-decoration:none;font:800 22px "Bricolage Grotesque",sans-serif;letter-spacing:-.03em}
+main{max-width:820px;margin:0 auto;padding:32px 16px 64px}h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;letter-spacing:-.02em;line-height:1.1}
+h1{font-size:clamp(30px,6vw,46px)}h2{margin-top:48px;border-top:1px solid var(--line);padding-top:24px}h3{margin-top:28px}
+a{color:var(--ember)}code{background:rgba(14,14,14,.06);padding:1px 5px;border-radius:4px;font-size:.9em}
+.t{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
+hr{border:0}footer{text-align:center;color:var(--smoke);font-size:14px;padding:24px}
+</style></head><body><header><a href="/">GroomScan</a></header><main><h1>Privacy Policy / Política de privacidad</h1>
+<p>Last updated / Última actualización: 14/10/2026</p>
+<hr />
+<h2>English</h2>
+<h3>1. Who we are</h3>
+<p>GroomScan ("the App", "we") is provided by <strong>Juan Antonio Cachazo Prieto (NIF 04231555S), Cedillo del Condado (Toledo), España</strong>, contact: <strong>hola@groomscan.com</strong>. For the data described below we act as:
+- <strong>Controller</strong> of merchant account data (section 3.1).
+- <strong>Processor on behalf of the merchant</strong> for data from the merchant's store visitors (section 3.2). The merchant is the controller for its shoppers.</p>
+<h3>2. What GroomScan does</h3>
+<p>Merchants add a widget to their Shopify store. A shopper may upload a photo of a hairstyle. The App analyses the photo and recommends products from that merchant's catalogue.</p>
+<h3>3. Data we process</h3>
+<p><strong>3.1 Merchants (installing the App)</strong>
+- Shop domain (<code>*.myshopify.com</code>), shop name, primary domain and store currency.
+- Whether the store is a development store, the selected plan and the Shopify subscription ID.
+- An app key that identifies the store in our service, and the onboarding steps the merchant ticked.
+- Shopify access tokens needed to run the App (stored encrypted at rest by our host and used only for the App).
+- Aggregate usage (number of scans per period).
+We do <strong>not</strong> access orders, customers or other Admin data: the App requests no Shopify Admin API access scopes.</p>
+<p><strong>3.2 Shoppers (store visitors using the widget)</strong>
+- <strong>Photo:</strong> sent only after the shopper ticks the consent box. It is processed in memory to estimate hairstyle parameters (style, texture, hold, finish, volume) and choose products, and then <strong>discarded. Photos are never stored</strong> by GroomScan or by the app.
+- <strong>Random device identifier:</strong> a random value created in the shopper's browser (<code>localStorage</code>, key <code>gs_device</code>) to apply fair-use limits (scans per user). It does not contain names, emails or any information from the shopper's Shopify account.
+- <strong>Scan log:</strong> date and time, store, the random device identifier, language, the estimated hairstyle parameters and the products recommended. Used for usage limits, billing per plan, service quality and aggregate reports to the merchant. It contains no photo, name, email, address or payment data.
+- The widget also uses <code>sessionStorage</code> to remember that the automatic popup was already shown.
+We do <strong>not</strong> collect Shopify customer data (names, emails, addresses, orders) and do not use shopper data for advertising or to build profiles across stores.</p>
+<h3>4. Purposes and legal bases (GDPR)</h3>
+<div class=t><table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>Legal basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Providing the App to merchants, billing through Shopify, support</td>
+<td>Contract (Art. 6(1)(b))</td>
+</tr>
+<tr>
+<td>Analysing a shopper's photo to recommend products</td>
+<td>Shopper's consent given in the widget (Art. 6(1)(a)), on behalf of the merchant</td>
+</tr>
+<tr>
+<td>Fair-use limits, security and service quality (device identifier, scan log)</td>
+<td>Legitimate interest (Art. 6(1)(f)) of providing a reliable service</td>
+</tr>
+<tr>
+<td>Legal and tax obligations</td>
+<td>Legal obligation (Art. 6(1)(c))</td>
+</tr>
+<tr>
+<td>The photo is not used to identify a person and no biometric identification or facial recognition is performed.</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h3>5. Sub-processors</h3>
+<div class=t><table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Purpose</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shopify Inc. / Shopify International Ltd.</td>
+<td>Platform, app installation, billing</td>
+<td>Canada / Ireland / USA</td>
+</tr>
+<tr>
+<td>Anthropic PBC</td>
+<td>AI analysis of the photo (not stored; under its commercial API terms, inputs are not used for model training by default)</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>n8n GmbH (n8n Cloud)</td>
+<td>Recommendation workflow hosting</td>
+<td>EU (Germany)</td>
+</tr>
+<tr>
+<td>Google LLC (Google Workspace / Sheets)</td>
+<td>Store registry and scan logs</td>
+<td>EU / USA</td>
+</tr>
+<tr>
+<td>Fly.io, Inc.</td>
+<td>App hosting and database</td>
+<td>EU (Amsterdam)</td>
+</tr>
+<tr>
+<td>Transfers outside the EEA rely on the European Commission's Standard Contractual Clauses and/or the EU-US Data Privacy Framework where the provider is certified.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h3>6. Retention</h3>
+<ul>
+<li>Photos: not retained (deleted right after analysis).</li>
+<li>Scan logs: 12 months, then deleted or aggregated anonymously.</li>
+<li>Merchant data: while the App is installed. When a merchant uninstalls, sessions are deleted immediately and all shop data is deleted when Shopify sends the <code>shop/redact</code> request (48 hours after uninstall).</li>
+<li>Billing records: as required by tax law.</li>
+</ul>
+<h3>7. Shopify privacy requests</h3>
+<p>We implement Shopify's mandatory privacy webhooks: <code>customers/data_request</code> and <code>customers/redact</code> (we hold no Shopify customer data, so there is nothing to export or erase; requests are logged) and <code>shop/redact</code> (all shop data is deleted).</p>
+<h3>8. Your rights</h3>
+<p>You can request access, rectification, erasure, restriction, portability or object to processing by writing to <strong>hola@groomscan.com</strong>. Shoppers can also contact the merchant's store, which is the controller of its customers' data; we will assist the merchant. Shoppers can delete the device identifier at any time by clearing their browser's site data. You may complain to a supervisory authority (in Spain: Agencia Española de Protección de Datos, www.aepd.es).</p>
+<h3>9. Security</h3>
+<p>Encrypted connections (HTTPS), webhook signature (HMAC) verification, Shopify session tokens, minimal data collection and access restricted to the App.</p>
+<h3>10. Children</h3>
+<p>The widget is not directed at children under 14. Merchants should not target the widget at children.</p>
+<h3>11. Changes</h3>
+<p>We will publish changes on this page and update the date above. Material changes will be notified to merchants in the App.</p>
+<hr />
+<h2>Español</h2>
+<h3>1. Quiénes somos</h3>
+<p>GroomScan ("la App") la presta <strong>Juan Antonio Cachazo Prieto (NIF 04231555S), Cedillo del Condado (Toledo), España</strong>, contacto: <strong>hola@groomscan.com</strong>. Actuamos como <strong>responsable</strong> de los datos de los comerciantes y como <strong>encargado del tratamiento por cuenta del comerciante</strong> para los datos de los visitantes de su tienda (el comerciante es el responsable respecto a sus clientes).</p>
+<h3>2. Qué hace GroomScan</h3>
+<p>El comerciante añade un widget a su tienda Shopify. El cliente puede subir una foto de un peinado; la App la analiza y recomienda productos del catálogo de esa tienda.</p>
+<h3>3. Datos que tratamos</h3>
+<p><strong>Comerciantes:</strong> dominio y nombre de la tienda, dominio principal, moneda, si es tienda de desarrollo, plan e ID de suscripción, clave de la App, pasos del onboarding, tokens de acceso de Shopify necesarios para la App y uso agregado. No accedemos a pedidos ni clientes: la App no pide scopes de la Admin API.</p>
+<p><strong>Clientes de la tienda:</strong>
+- <strong>Foto:</strong> solo se envía si el cliente marca la casilla de consentimiento. Se procesa en memoria para estimar parámetros del peinado (estilo, textura, fijación, acabado, volumen) y elegir productos, y después <strong>se descarta. Las fotos no se guardan nunca.</strong>
+- <strong>Identificador aleatorio del dispositivo:</strong> un valor aleatorio creado en el navegador (<code>localStorage</code>, clave <code>gs_device</code>) para aplicar límites de uso. No contiene nombre, email ni datos de la cuenta del cliente.
+- <strong>Registro del escaneo:</strong> fecha y hora, tienda, identificador aleatorio, idioma, parámetros estimados del peinado y productos recomendados. Sin foto, nombre, email, dirección ni datos de pago.
+- <code>sessionStorage</code> para recordar que el popup automático ya se mostró.
+No recogemos datos de clientes de Shopify ni usamos los datos para publicidad o para crear perfiles entre tiendas.</p>
+<h3>4. Finalidades y bases legales (RGPD)</h3>
+<p>Prestación del servicio y cobro: ejecución del contrato (art. 6.1.b). Análisis de la foto: consentimiento del cliente en el widget (art. 6.1.a), por cuenta del comerciante. Límites de uso, seguridad y calidad: interés legítimo (art. 6.1.f). Obligaciones legales y fiscales (art. 6.1.c). No se realiza identificación biométrica ni reconocimiento facial.</p>
+<h3>5. Subencargados</h3>
+<p>Shopify (plataforma y cobro), Anthropic PBC (análisis de la foto con IA, EE. UU., sin almacenamiento), n8n GmbH (flujo de recomendación, UE), Google LLC (registro de tiendas y de escaneos), Fly.io, Inc. (alojamiento de la App, UE). Las transferencias fuera del EEE se amparan en las Cláusulas Contractuales Tipo de la Comisión Europea o en el Marco de Privacidad de Datos UE-EE. UU. cuando el proveedor está certificado.</p>
+<h3>6. Conservación</h3>
+<p>Fotos: no se conservan. Registros de escaneos: 12 meses y luego se borran o se anonimizan. Datos del comerciante: mientras la App esté instalada; al desinstalar se borran las sesiones y, con el aviso <code>shop/redact</code> de Shopify (48 h después), todos los datos de la tienda. Datos de facturación: lo que exija la ley fiscal.</p>
+<h3>7. Solicitudes de privacidad de Shopify</h3>
+<p><code>customers/data_request</code> y <code>customers/redact</code>: no guardamos datos de clientes de Shopify; se registran. <code>shop/redact</code>: se borran todos los datos de la tienda.</p>
+<h3>8. Tus derechos</h3>
+<p>Acceso, rectificación, supresión, limitación, portabilidad y oposición escribiendo a <strong>hola@groomscan.com</strong>. El cliente también puede dirigirse a la tienda (responsable de sus datos) y puede borrar el identificador limpiando los datos del sitio en su navegador. Puedes reclamar ante la Agencia Española de Protección de Datos (www.aepd.es).</p>
+<h3>9. Seguridad</h3>
+<p>HTTPS, verificación de firma (HMAC) en los webhooks, session tokens de Shopify y mínima recogida de datos.</p>
+<h3>10. Menores</h3>
+<p>El widget no está dirigido a menores de 14 años.</p>
+<h3>11. Cambios</h3>
+<p>Publicaremos los cambios en esta página con su fecha y avisaremos en la App de los cambios importantes.</p></main>
+<footer>© 2026 GroomScan · <a href="mailto:hola@groomscan.com">hola@groomscan.com</a></footer></body></html>

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GroomScan · Configurador</title>
+<meta name="description" content="Personaliza GroomScan con tu marca y copia el código para tu tienda.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E0E0E'/%3E%3Cpath d='M8 13V8h5M19 8h5v5M24 19v5h-5M13 24H8v-5' stroke='%23F4F1EC' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23E4572E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0E0E0E;--paper:#F4F1EC;--acc:#E4572E;--line:#dcd6cc;--mut:#6b655c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.45}
+header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:var(--ink);color:var(--paper)}
+header a{color:inherit;text-decoration:none;font-family:"Bricolage Grotesque",Inter,sans-serif;font-weight:800;font-size:20px;display:flex;gap:10px;align-items:center}
+header small{opacity:.7}
+main{max-width:1200px;margin:0 auto;padding:24px 16px 60px;display:grid;gap:24px;grid-template-columns:1fr}
+@media(min-width:980px){main{grid-template-columns:420px 1fr}}
+h1{font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:34px;line-height:1.05;margin:4px 0 6px}
+.lead{color:var(--mut);margin:0 0 18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}
+.card h2{font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 12px;color:var(--mut)}
+.f{display:grid;gap:5px;margin-bottom:12px}
+.f label{font-size:13px;font-weight:600}
+.f input[type=text],.f input[type=url],.f select{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;width:100%}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.color{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:6px 8px}
+.color input[type=color]{width:34px;height:30px;border:0;padding:0;background:none;cursor:pointer}
+.color input[type=text]{border:0;padding:4px;font:inherit;width:100%;min-width:0}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{font:inherit;font-size:13px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.avs{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}@media(max-width:480px){.avs{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.avs button{aspect-ratio:1;border:2px solid var(--line);border-radius:12px;background:#fff;cursor:pointer;padding:2px;font:inherit;font-size:11px;font-weight:700}
+.avs button[aria-pressed=true]{border-color:var(--acc)}
+.avs svg{width:100%;height:100%}
+.presets{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.presets button{border:1px solid var(--line);border-radius:999px;padding:5px 10px 5px 5px;background:#fff;font:inherit;font-size:12.5px;cursor:pointer;display:flex;gap:6px;align-items:center}
+.presets i{width:18px;height:18px;border-radius:50%;display:inline-block;border:1px solid #0002}
+.preview{position:sticky;top:16px;align-self:start}
+.frame{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#e9e4dc}
+.frame .bar{display:flex;gap:6px;padding:10px 12px;background:#fff;border-bottom:1px solid var(--line);align-items:center;font-size:12px;color:var(--mut)}
+.frame .bar i{width:10px;height:10px;border-radius:50%;background:#ddd}
+iframe{width:100%;height:760px;border:0;display:block;background:#fff}
+pre{margin:0;background:var(--ink);color:#f4f1ec;border-radius:12px;padding:14px;font-size:12.5px;white-space:pre-wrap;word-break:break-all;max-height:240px;overflow:auto}
+.btn{font:inherit;font-weight:700;border:0;border-radius:999px;padding:11px 18px;cursor:pointer;background:var(--acc);color:#fff}
+.btn.s{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.hint{font-size:12.5px;color:var(--mut);margin:6px 0 0}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+</style>
+</head>
+<body>
+<header><a href="index.html"><svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 12V6h6M20 6h6v6M26 20v6h-6M12 26H6v-6" stroke="#F4F1EC" stroke-width="2.6" fill="none" stroke-linecap="round"/><circle cx="16" cy="16" r="3.4" fill="#E4572E"/></svg>GroomScan</a><small>Configurador</small></header>
+<main>
+  <section>
+    <h1>Hazlo tuyo.</h1>
+    <p class="lead">Elige colores, logo y avatar. A la derecha ves cómo queda en tu web, y abajo tienes el código listo para pegar.</p>
+
+    <div class="card">
+      <h2>Tu tienda</h2>
+      <div class="f"><label for="key">Tu key de GroomScan</label><input type="text" id="key" placeholder="gs_xxxxxxxx (te la mandamos al darte de alta)" autocomplete="off"><p class="hint">¿Aún no tienes? Deja <b>demo</b> y prueba con la dirección de tu tienda Shopify.</p></div>
+      <div class="f"><label>Cómo aparece</label><div class="seg" id="mode"><button type="button" data-v="popup" aria-pressed="true">Pop-up que salta</button><button type="button" data-v="button" aria-pressed="false">Botón flotante</button><button type="button" data-v="inline" aria-pressed="false">Dentro de una página</button></div></div>
+      <div class="row">
+        <div class="f"><label for="lang">Idioma</label><select id="lang"><option value="es">Español</option><option value="en">English</option><option value="pt">Português</option><option value="fr">Français</option><option value="it">Italiano</option><option value="de">Deutsch</option></select></div>
+        <div class="f"><label for="pos">Posición del botón</label><select id="pos"><option value="right">Derecha</option><option value="left">Izquierda</option></select></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h2>Identidad de marca</h2>
+      <div class="presets" id="presets"></div>
+      <div class="row">
+        <div class="f"><label>Color principal</label><div class="color"><input type="color" id="color" value="#111111"><input type="text" id="colorT" value="#111111" aria-label="Color principal hex"></div></div>
+        <div class="f"><label>Color de acento</label><div class="color"><input type="color" id="accent" value="#E4572E"><input type="text" id="accentT" value="#E4572E" aria-label="Acento hex"></div></div>
+        <div class="f"><label>Fondo</label><div class="color"><input type="color" id="bg" value="#FFFFFF"><input type="text" id="bgT" value="#FFFFFF" aria-label="Fondo hex"></div></div>
+        <div class="f"><label>Texto</label><div class="color"><input type="color" id="text" value="#111111"><input type="text" id="textT" value="#111111" aria-label="Texto hex"></div></div>
+      </div>
+      <div class="f"><label for="logo">Logo (URL de la imagen)</label><input type="url" id="logo" placeholder="https://tutienda.com/logo.png"></div>
+      <div class="row">
+        <div class="f"><label for="font">Tipografía</label><select id="font"><option value="inherit">La de mi web</option><option>Inter</option><option>Montserrat</option><option>Poppins</option><option>Playfair Display</option><option>Oswald</option><option>DM Sans</option></select></div>
+        <div class="f"><label for="radius">Esquinas</label><select id="radius"><option value="4">Rectas</option><option value="12">Suaves</option><option value="16" selected>Redondeadas</option><option value="24">Muy redondas</option></select></div>
+      </div>
+      <div class="f"><label for="title">Título (opcional)</label><input type="text" id="title" placeholder="¿Qué me echo para este peinado?"></div>
+      <div class="f"><label for="btn">Texto del botón (opcional)</label><input type="text" id="btn" placeholder="Escanea tu peinado"></div>
+      <div class="f"><label>Avatar del escáner</label><div class="avs" id="avs"></div><p class="hint">6 formas de cabeza y peinados distintos, o que cambie solo en cada visita.</p></div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h2>Tu código</h2>
+      <pre id="code"></pre>
+      <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap"><button class="btn" id="copy" type="button">Copiar código</button><button class="btn s" id="reset" type="button">Restablecer</button></div>
+      <p class="hint">Shopify: Tienda online → Temas → Editar código → <b>theme.liquid</b>, pégalo justo antes de <code>&lt;/body&gt;</code>. WordPress/WooCommerce: en el pie de página o con un plugin de "insertar código". Modo "dentro de una página": pon también <code>&lt;div id="groomscan"&gt;&lt;/div&gt;</code> donde quieras que salga.</p>
+    </div>
+  </section>
+
+  <section class="preview" aria-label="Vista previa">
+    <div class="frame"><div class="bar"><i></i><i></i><i></i><span style="margin-left:8px">tutienda.com · vista previa</span></div><iframe id="pv" title="Vista previa de GroomScan" loading="lazy"></iframe></div>
+    <p class="hint">La vista previa usa tu configuración real. Con la key <b>demo</b> puedes escanear de verdad escribiendo tu tienda Shopify.</p>
+  </section>
+</main>
+<script>
+(function(){
+  var SRC='https://cdn.shopify.com/s/files/1/1087/2740/2837/files/groomscan.js';
+  var AV=[['#E9BF9B','#2A1C14','M60 30c-17 0-29 12-29 30 0 17 12 33 29 33s29-16 29-33c0-18-12-30-29-30z','M31 52c0-16 9-27 23-29 8-9 26-10 33-1 6 7 5 15 2 22-4-6-10-9-17-9-10 0-18 3-26 7-6 3-11 6-15 10z'],['#C98E64','#1B1410','M34 38h52c3 0 5 2 5 5v22c0 16-14 29-31 29S29 81 29 65V43c0-3 2-5 5-5z','M29 50c0-14 8-24 31-24s31 10 31 24c-4-4-7-4-10-3 0-3-2-5-4-5-2 3-6 5-9 4-2 2-5 3-8 2-3 2-7 2-10 0-3 2-7 2-10 0-3 2-7 3-11 2z'],['#8A5A3C','#120D0A','M60 32c-18 0-30 13-30 30s13 31 30 31 30-14 30-31-12-30-30-30z','M30 56c-4-10 2-22 10-25 2-8 12-12 18-8 6-5 17-3 20 4 9 1 15 10 12 19 3 4 2 9-1 11-2-7-7-11-12-11-3 3-8 3-11 1-4 2-9 2-12 0-4 2-9 1-11-2-6 1-11 6-13 11z'],['#F2CFB0','#4A3020','M60 26c-15 0-26 11-26 28v12c0 17 11 31 26 31s26-14 26-31V54c0-17-11-28-26-28z','M33 62c-3-23 6-38 27-38s30 15 27 38c-2-10-6-16-12-19-4-1-9 2-15 10-6-8-11-11-15-10-6 3-10 9-12 19z'],['#B07A52','#2E1F15','M60 30c-17 0-29 11-29 27 0 19 15 36 29 36s29-17 29-36c0-16-12-27-29-27z','M30 56c-2-17 10-28 30-28s32 11 30 28c-1 8-2 16 0 24-4-3-5-9-5-16-3-6-8-9-14-11-6 2-11 2-17 0-6 2-11 5-14 11 0 7-1 13-5 16 2-8 1-16 0-24z'],['#6B4430','#0E0A08','M60 28c-16 0-28 11-28 27 0 9 3 17 8 24 5 8 12 14 20 14s15-6 20-14c5-7 8-15 8-24 0-16-12-27-28-27z','M32 50c1-14 12-23 28-23s27 9 28 23c-6-5-15-8-28-8s-22 3-28 8z','M38 70c2 13 11 23 22 23s20-10 22-23c-4 5-9 7-14 7-3-3-5-4-8-4s-5 1-8 4c-5 0-10-2-14-7z']];
+  function av(a,c){return '<svg viewBox="0 0 120 120"><path d="M26 118c4-16 18-24 34-24s30 8 34 24z" fill="'+c+'"/><path d="M48 88h24v10H48z" fill="'+a[0]+'"/><ellipse cx="31" cy="62" rx="5" ry="8" fill="'+a[0]+'"/><ellipse cx="89" cy="62" rx="5" ry="8" fill="'+a[0]+'"/><path d="'+a[2]+'" fill="'+a[0]+'"/>'+(a[4]?'<path d="'+a[4]+'" fill="'+a[1]+'"/>':'')+'<path d="'+a[3]+'" fill="'+a[1]+'"/></svg>';}
+  var PRESETS=[['Negro clásico','#111111','#E4572E','#FFFFFF','#111111'],['Barbería oscura','#7A1F1F','#E5484D','#0E0E0E','#F4F1EC'],['Natural','#2F5D46','#C9A24A','#F4EFE6','#1D2B24'],['Azul eléctrico','#1D4ED8','#F59E0B','#FFFFFF','#0B1220'],['Rosa salón','#B83280','#111111','#FFF5F9','#2A0E1C']];
+  var $=function(id){return document.getElementById(id)};
+  var st={key:'demo',mode:'popup',lang:'es',position:'right',color:'#111111',accent:'#E4572E',bg:'#FFFFFF',text:'#111111',logo:'',font:'inherit',radius:'16',title:'',button:'',avatar:'auto'};
+  var DEF=JSON.parse(JSON.stringify(st));
+  try{var sv=JSON.parse(localStorage.getItem('gs_cfg')||'null');if(sv)Object.assign(st,sv)}catch(e){}
+  // presets
+  $('presets').innerHTML=PRESETS.map(function(p,i){return '<button type="button" data-i="'+i+'"><i style="background:'+p[1]+'"></i><i style="background:'+p[3]+'"></i>'+p[0]+'</button>'}).join('');
+  $('presets').onclick=function(e){var b=e.target.closest('button');if(!b)return;var p=PRESETS[b.dataset.i];st.color=p[1];st.accent=p[2];st.bg=p[3];st.text=p[4];sync();};
+  // avatars
+  function drawAvs(){$('avs').innerHTML=AV.map(function(a,i){return '<button type="button" data-v="'+(i+1)+'" aria-label="Avatar '+(i+1)+'" aria-pressed="'+(st.avatar==String(i+1))+'">'+av(a,st.color)+'</button>'}).join('')+'<button type="button" data-v="auto" aria-pressed="'+(st.avatar==='auto')+'">Auto</button>';}
+  $('avs').onclick=function(e){var b=e.target.closest('button');if(!b)return;st.avatar=b.dataset.v;sync();};
+  $('mode').onclick=function(e){var b=e.target.closest('button');if(!b)return;st.mode=b.dataset.v;sync();};
+  // inputs
+  ['color','accent','bg','text'].forEach(function(k){
+    $(k).oninput=function(){st[k]=this.value.toUpperCase();sync()};
+    $(k+'T').onchange=function(){var v=this.value.trim();if(/^#?[0-9a-f]{6}$/i.test(v)){st[k]=(v[0]==='#'?v:'#'+v).toUpperCase();}sync()};
+  });
+  [['key','key'],['lang','lang'],['pos','position'],['logo','logo'],['font','font'],['radius','radius'],['title','title'],['btn','button']].forEach(function(p){$(p[0]).addEventListener('change',function(){st[p[1]]=this.value.trim()||(p[1]==='key'?'demo':(p[1]==='font'?'inherit':''));sync()});});
+  function attrs(forPreview){
+    var a=['data-key="'+esc(st.key||'demo')+'"','data-mode="'+st.mode+'"','data-color="'+st.color+'"','data-accent="'+st.accent+'"','data-bg="'+st.bg+'"','data-text="'+st.text+'"'];
+    if(st.lang!=='es'||forPreview)a.push('data-lang="'+st.lang+'"');
+    if(st.position!=='right')a.push('data-position="'+st.position+'"');
+    if(st.logo)a.push('data-logo="'+esc(st.logo)+'"');
+    if(st.font!=='inherit')a.push('data-font="'+esc(st.font)+'"');
+    if(st.radius!=='16')a.push('data-radius="'+st.radius+'"');
+    if(st.title)a.push('data-title="'+esc(st.title)+'"');
+    if(st.button)a.push('data-button="'+esc(st.button)+'"');
+    if(st.avatar!=='auto')a.push('data-avatar="'+st.avatar+'"');
+    if(forPreview&&st.mode==='popup')a.push('data-delay="600"');
+    return a;
+  }
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function code(){return (st.mode==='inline'?'<div id="groomscan"></div>\n':'')+'<script src="'+SRC+'"\n  '+attrs(false).join('\n  ')+'\n  async><\/script>';}
+  var tmr;
+  function preview(){
+    clearTimeout(tmr);tmr=setTimeout(function(){
+      var gf=st.font!=='inherit'?'<link href="https://fonts.googleapis.com/css2?family='+encodeURIComponent(st.font)+':wght@400;700;800&display=swap" rel="stylesheet">':'';
+      var html='<!doctype html><html lang="'+st.lang+'"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'+gf+'<style>body{margin:0;font-family:Georgia,serif;background:#efebe4;color:#222}.top{background:#fff;padding:14px 18px;border-bottom:1px solid #ddd;font-weight:700}.hero{padding:26px 18px}.hero h1{margin:0 0 8px;font-size:26px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:0 18px}.grid div{height:120px;background:#fff;border-radius:10px}</style></head><body><div class="top">'+(st.logo?'<img src="'+esc(st.logo)+'" style="height:24px">':'Tu Tienda')+'</div><div class="hero"><h1>Nueva colección de styling</h1><p>Así se ve GroomScan en tu web.</p></div>'+(st.mode==='inline'?'<div id="groomscan" style="padding:0 12px 20px"></div>':'<div class="grid"><div></div><div></div><div></div><div></div></div>')+'<script>try{sessionStorage.removeItem("gs_open")}catch(e){}<\/script><script src="'+SRC+'" '+attrs(true).join(' ')+'><\/script></body></html>';
+      $('pv').srcdoc=html;
+    },250);
+  }
+  function sync(){
+    ['color','accent','bg','text'].forEach(function(k){$(k).value=st[k];$(k+'T').value=st[k];});
+    $('key').value=st.key==='demo'?'':st.key;$('lang').value=st.lang;$('pos').value=st.position;$('logo').value=st.logo;$('font').value=st.font;$('radius').value=st.radius;$('title').value=st.title;$('btn').value=st.button;
+    [].forEach.call($('mode').children,function(b){b.setAttribute('aria-pressed',b.dataset.v===st.mode)});
+    drawAvs();$('code').textContent=code();preview();
+    try{localStorage.setItem('gs_cfg',JSON.stringify(st))}catch(e){}
+  }
+  $('copy').onclick=function(){var t=code(),b=this;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='¡Copiado!';setTimeout(function(){b.textContent='Copiar código'},1800)}).catch(function(){var r=document.createRange();r.selectNodeContents($('code'));var s=getSelection();s.removeAllRanges();s.addRange(r);});};
+  $('reset').onclick=function(){st=JSON.parse(JSON.stringify(DEF));sync();};
+  sync();
+})();
+</script>
+</body>
+</html>
