@@ -203,6 +203,7 @@ ol.how-grid{padding:0;margin-bottom:0}
 .plan{border:1px solid var(--line-d);border-radius:20px;padding:28px 24px;display:flex;flex-direction:column;gap:16px;background:var(--ink-2)}
 .plan h3{font-size:22px}
 .plan .price{font-family:var(--display);font-weight:800;font-size:56px;letter-spacing:-.04em;line-height:1}
+.plan .was{margin:6px 0 0;font-size:14px;color:var(--smoke-d);text-decoration:none}
 .plan .price small{font-family:var(--body);font-weight:500;font-size:15px;letter-spacing:0;color:var(--smoke-d)}
 .plan .scans{font-weight:600}
 .plan ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px;font-size:15px;color:var(--smoke-d)}
@@ -461,34 +462,34 @@ footer .made{margin-left:auto}
   <div class="wrap">
     <div class="head-row">
       <h2 id="h-precios" data-i18n="priceH">Paga por escaneos, no por promesas.</h2>
-      <p class="lede" data-i18n="priceSub">Precios mensuales en euros, IVA no incluido. Empieza gratis y sube de plan cuando el widget ya esté vendiendo.</p>
+      <p class="lede" data-i18n="priceSub">Precio fundador para las primeras tiendas: lo mantienes para siempre. Precios mensuales en dólares (USD), cobrados en tu factura de Shopify. Empieza gratis y sube de plan cuando el widget ya esté vendiendo.</p>
     </div>
     <div class="plans">
       <article class="plan">
         <h3>Free</h3>
-        <div class="price">0 €<small data-i18n="mo"> /mes</small></div>
+        <div class="price">0 $<small data-i18n="mo"> /mes</small></div>
         <p class="scans" data-i18n="pf1">50 escaneos al mes</p>
-        <ul><li data-i18n="pf2">Widget completo con tu catálogo</li><li data-i18n="pf3">Muestra «Funciona con GroomScan»</li></ul>
+        <ul><li data-i18n="pf2">Widget completo con tu catálogo</li><li data-i18n="pf4">Prioriza tus productos de más margen o rotación</li><li data-i18n="pf3">Muestra «Funciona con GroomScan»</li></ul>
         <a class="btn btn-line" href="#alta" data-plan="free" data-i18n="pCta0">Empezar gratis</a>
       </article>
       <article class="plan pop brk">
         <span class="badge" data-i18n="pop">El más elegido</span>
         <h3>Starter</h3>
-        <div class="price">29 €<small data-i18n="mo"> /mes</small></div>
+        <div class="price">29 $<small data-i18n="mo"> /mes</small></div><p class="was" data-i18n="was1">Después 39 $/mes</p>
         <p class="scans" data-i18n="ps1">1.000 escaneos al mes</p>
         <ul><li data-i18n="ps2">Sin marca GroomScan</li><li data-i18n="ps3">Personalización completa: logo, colores, fuente y avatar</li></ul>
         <a class="btn btn-hot" href="#alta" data-plan="starter" data-i18n="pCta">Elegir este plan</a>
       </article>
       <article class="plan">
         <h3>Business</h3>
-        <div class="price">79 €<small data-i18n="mo"> /mes</small></div>
+        <div class="price">79 $<small data-i18n="mo"> /mes</small></div><p class="was" data-i18n="was2">Después 99 $/mes</p>
         <p class="scans" data-i18n="pb1">5.000 escaneos al mes</p>
         <ul><li data-i18n="pb2">Todo lo de Starter</li><li data-i18n="pb3">Marcas prioritarias: tú eliges qué marca gana cuando dos productos encajan igual</li><li data-i18n="pb4">Informe mensual de tendencias</li></ul>
         <a class="btn btn-line" href="#alta" data-plan="business" data-i18n="pCta">Elegir este plan</a>
       </article>
       <article class="plan">
-        <h3 data-i18n="pdName">Distribuidor</h3>
-        <div class="price">199 €<small data-i18n="mo"> /mes</small></div>
+        <h3 data-i18n="pdName">Pro</h3>
+        <div class="price">199 $<small data-i18n="mo"> /mes</small></div><p class="was" data-i18n="was3">Después 249 $/mes</p>
         <p class="scans" data-i18n="pd1">20.000 escaneos al mes</p>
         <ul><li data-i18n="pd2">Todo lo de Business</li><li data-i18n="pd3">Multimarca</li><li data-i18n="pd4">Soporte prioritario</li></ul>
         <a class="btn btn-line" href="#alta" data-plan="distribuidor" data-i18n="pCta">Elegir este plan</a>
@@ -566,7 +567,7 @@ footer .made{margin-left:auto}
         <div class="fld"><label for="f-plat" data-i18n="fPlat">Plataforma</label>
           <select id="f-plat" name="plataforma"><option>Shopify</option><option>WooCommerce</option><option>PrestaShop</option><option>Wix</option><option value="Otra" data-i18n="fOtra">Otra</option></select></div>
         <div class="fld"><label for="f-plan" data-i18n="fPlan">Plan</label>
-          <select id="f-plan" name="plan"><option value="free">Free · 0 €</option><option value="starter" selected>Starter · 29 €</option><option value="business">Business · 79 €</option><option value="distribuidor" data-i18n="fDist">Distribuidor · 199 €</option></select></div>
+          <select id="f-plan" name="plan"><option value="free">Free · 0 $</option><option value="starter" selected>Starter · 29 $</option><option value="business">Business · 79 $</option><option value="distribuidor" data-i18n="fDist">Pro · 199 $</option></select></div>
         <div class="fld full"><label for="f-msg" data-i18n="fMsg">Mensaje (opcional)</label><textarea id="f-msg" name="mensaje" data-i18n-ph="fMsgPh" placeholder="Cuéntanos qué vendes o cualquier duda."></textarea></div>
         <label class="consent"><input type="checkbox" id="f-ok" required aria-describedby="e-ok"><span data-i18n-html="fConsent">Acepto que GroomScan use estos datos para contactarme sobre mi alta, según la <a href="/privacidad">política de privacidad</a>.</span></label>
         <span class="err" id="e-ok" style="grid-column:1/-1;margin-top:-10px"></span>
@@ -629,11 +630,11 @@ footer .made{margin-left:auto}
       th1:"Dark and red, inline.",th2:"Black and white, floating button.",th3:"Beige and green, auto pop-up.",
       o1:"es · en · pt · fr · it · de",o2:"Consent before uploading the photo",o3:"Limit of 3 scans per person per week",o4:"Recognises textured crop, middle part, mullet, quiff and curls",
       priceH:"Pay for scans, not promises.",
-      priceSub:"Monthly prices in euros, VAT excluded. Start free and move up once the widget is already selling.",
+      priceSub:"Founder pricing for our first stores: keep it forever. Monthly prices in US dollars, billed on your Shopify invoice. Start free and move up once the widget is already selling.",was1:"Later $39/month",was2:"Later $99/month",was3:"Later $249/month",pf4:"Prioritise your highest-margin or best-selling products",
       mo:" /month",pf1:"50 scans a month",pf2:"Full widget with your catalogue",pf3:"Shows “Powered by GroomScan”",pCta0:"Start free",
       pop:"Most popular",ps1:"1,000 scans a month",ps2:"No GroomScan branding",ps3:"Full customisation: logo, colours, font and avatar",pCta:"Choose this plan",
       pb1:"5,000 scans a month",pb2:"Everything in Starter",pb3:"Priority brands: you pick which brand wins when two products fit equally",pb4:"Monthly trends report",
-      pdName:"Distributor",pd1:"20,000 scans a month",pd2:"Everything in Business",pd3:"Multi-brand",pd4:"Priority support",
+      pdName:"Pro",pd1:"20,000 scans a month",pd2:"Everything in Business",pd3:"Multi-brand",pd4:"Priority support",
       noLock:"No lock-in. Cancel anytime.",noLock2:"Your data is yours, even if you leave.",
       instH:"One line of code.",instSub:"Works on Shopify, WooCommerce and any site where you can paste a script. We send you your key when you sign up.",
       tabAny:"Any website",flag:"App in review",shTxt:"Meanwhile, paste the code into your theme (theme.liquid) in 1 minute.",
@@ -653,7 +654,7 @@ footer .made{margin-left:auto}
       q8:"Can I cancel?",a8:"Whenever you like. There's no lock-in: cancel and billing stops at the end of the month.",
       altaH:"Put it on your store this week.",altaSub:"Leave your details and we'll send your key and the code ready to paste.",
       pk1:"Reply in under 24 h.",pk2:"Start on the plan you choose, or free.",pk3:"No lock-in.",
-      fNombre:"Name",fEmail:"Email",fWeb:"Store website",fPlat:"Platform",fOtra:"Other",fPlan:"Plan",fDist:"Distributor · €199",
+      fNombre:"Name",fEmail:"Email",fWeb:"Store website",fPlat:"Platform",fOtra:"Other",fPlan:"Plan",fDist:"Pro · $199",
       fMsg:"Message (optional)",fMsgPh:"Tell us what you sell or ask us anything.",
       fConsent:"I agree that GroomScan may use this data to contact me about my sign-up, under the <a href=\"/privacidad\">privacy policy</a>.",
       fSend:"Get my key",fSending:"Sending…",
