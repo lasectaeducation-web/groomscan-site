@@ -101,7 +101,7 @@ pre{margin:0;background:var(--ink);color:#f4f1ec;border-radius:12px;padding:14px
 </main>
 <script>
 (function(){
-  var SRC='https://cdn.shopify.com/s/files/1/1087/2740/2837/files/groomscan.js';
+  var SRC=location.origin+'/widget.js';
   var AV=[['#E9BF9B','#2A1C14','M60 30c-17 0-29 12-29 30 0 17 12 33 29 33s29-16 29-33c0-18-12-30-29-30z','M31 52c0-16 9-27 23-29 8-9 26-10 33-1 6 7 5 15 2 22-4-6-10-9-17-9-10 0-18 3-26 7-6 3-11 6-15 10z'],['#C98E64','#1B1410','M34 38h52c3 0 5 2 5 5v22c0 16-14 29-31 29S29 81 29 65V43c0-3 2-5 5-5z','M29 50c0-14 8-24 31-24s31 10 31 24c-4-4-7-4-10-3 0-3-2-5-4-5-2 3-6 5-9 4-2 2-5 3-8 2-3 2-7 2-10 0-3 2-7 2-10 0-3 2-7 3-11 2z'],['#8A5A3C','#120D0A','M60 32c-18 0-30 13-30 30s13 31 30 31 30-14 30-31-12-30-30-30z','M30 56c-4-10 2-22 10-25 2-8 12-12 18-8 6-5 17-3 20 4 9 1 15 10 12 19 3 4 2 9-1 11-2-7-7-11-12-11-3 3-8 3-11 1-4 2-9 2-12 0-4 2-9 1-11-2-6 1-11 6-13 11z'],['#F2CFB0','#4A3020','M60 26c-15 0-26 11-26 28v12c0 17 11 31 26 31s26-14 26-31V54c0-17-11-28-26-28z','M33 62c-3-23 6-38 27-38s30 15 27 38c-2-10-6-16-12-19-4-1-9 2-15 10-6-8-11-11-15-10-6 3-10 9-12 19z'],['#B07A52','#2E1F15','M60 30c-17 0-29 11-29 27 0 19 15 36 29 36s29-17 29-36c0-16-12-27-29-27z','M30 56c-2-17 10-28 30-28s32 11 30 28c-1 8-2 16 0 24-4-3-5-9-5-16-3-6-8-9-14-11-6 2-11 2-17 0-6 2-11 5-14 11 0 7-1 13-5 16 2-8 1-16 0-24z'],['#6B4430','#0E0A08','M60 28c-16 0-28 11-28 27 0 9 3 17 8 24 5 8 12 14 20 14s15-6 20-14c5-7 8-15 8-24 0-16-12-27-28-27z','M32 50c1-14 12-23 28-23s27 9 28 23c-6-5-15-8-28-8s-22 3-28 8z','M38 70c2 13 11 23 22 23s20-10 22-23c-4 5-9 7-14 7-3-3-5-4-8-4s-5 1-8 4c-5 0-10-2-14-7z']];
   function av(a,c){return '<svg viewBox="0 0 120 120"><path d="M26 118c4-16 18-24 34-24s30 8 34 24z" fill="'+c+'"/><path d="M48 88h24v10H48z" fill="'+a[0]+'"/><ellipse cx="31" cy="62" rx="5" ry="8" fill="'+a[0]+'"/><ellipse cx="89" cy="62" rx="5" ry="8" fill="'+a[0]+'"/><path d="'+a[2]+'" fill="'+a[0]+'"/>'+(a[4]?'<path d="'+a[4]+'" fill="'+a[1]+'"/>':'')+'<path d="'+a[3]+'" fill="'+a[1]+'"/></svg>';}
   var PRESETS=[['Negro clásico','#111111','#E4572E','#FFFFFF','#111111'],['Barbería oscura','#7A1F1F','#E5484D','#0E0E0E','#F4F1EC'],['Natural','#2F5D46','#C9A24A','#F4EFE6','#1D2B24'],['Azul eléctrico','#1D4ED8','#F59E0B','#FFFFFF','#0B1220'],['Rosa salón','#B83280','#111111','#FFF5F9','#2A0E1C']];
@@ -136,7 +136,7 @@ pre{margin:0;background:var(--ink);color:#f4f1ec;border-radius:12px;padding:14px
     return a;
   }
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-  function code(){return (st.mode==='inline'?'<div id="groomscan"></div>\n':'')+'<script src="'+SRC+'"\n  '+attrs(false).join('\n  ')+'\n  async><\/script>';}
+  function code(){return (st.mode==='inline'?'<div id="groomscan"></div>\n':'')+'<script src="https://groomscan.com/widget.js"\n  '+attrs(false).join('\n  ')+'\n  async><\/script>';}
   var tmr;
   function preview(){
     clearTimeout(tmr);tmr=setTimeout(function(){
