@@ -56,7 +56,7 @@ We do <strong>not</strong> access orders, customers or other Admin data: the App
 <p><strong>Random device identifier:</strong> a random value created in the shopper's browser (<code>localStorage</code>, key <code>gs_device</code>) to apply fair-use limits (scans per user). It does not contain names, emails or any information from the shopper's Shopify account.</p>
 </li>
 <li>
-<p><strong>Scan log:</strong> date and time, store, the random device identifier, language, the estimated hairstyle parameters and the products recommended. Used for usage limits, billing per plan, service quality and aggregate reports to the merchant. It contains no photo, name, email, address or payment data.</p>
+<p><strong>Scan log:</strong> date and time, store, the random device identifier, language, the estimated hairstyle parameters and the products recommended. Used for usage limits, billing per plan and service quality; the merchant sees the monthly scan count in the GroomScan admin. It contains no photo, name, email, address or payment data.</p>
 </li>
 <li>
 <p>The widget also uses <code>sessionStorage</code> to remember that the automatic popup was already shown.
