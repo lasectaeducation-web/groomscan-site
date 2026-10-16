@@ -1,0 +1,44 @@
+name: Deploy groomscan.com (Cloudflare Pages)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Cloudflare credentials
+        id: creds
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -z "$CF_TOKEN" ]; then
+            echo "CLOUDFLARE_API_TOKEN secret not set: skipping deploy (upload by hand in the Cloudflare dashboard)."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.creds.outputs.ok == 'true'
+      - name: Build the publish folder (only the public files)
+        if: steps.creds.outputs.ok == 'true'
+        run: |
+          mkdir -p dist
+          cp _headers index.html configurador.html privacidad.html widget.js screencast.mp4 dist/
+      - name: Deploy to Cloudflare Pages (production)
+        if: steps.creds.outputs.ok == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: 9d9f0df3d5c0fc7e7744b6883cbd3a54
+        run: npx --yes wrangler@3 pages deploy dist --project-name groomscan --branch main --commit-dirty=true
+      - name: Check the live site
+        if: steps.creds.outputs.ok == 'true'
+        run: |
+          sleep 20
+          curl -fsS https://groomscan.com/ | grep -q "Sé de las primeras tiendas" && echo "groomscan.com is live with the new version"

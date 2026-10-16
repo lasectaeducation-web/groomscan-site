@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GroomScan · Del TikTok al carrito</title>
-<meta name="description" content="GroomScan es el escáner de peinados para tiendas online de productos de peluquería y barbería. Tu cliente sube la foto del peinado que quiere y recibe en 10 segundos la rutina exacta con productos de tu catálogo, lista para comprar.">
+<meta name="description" content="GroomScan es el escáner de peinados para tiendas online de productos de peluquería y barbería. Tu cliente sube la foto del peinado que quiere y recibe en unos segundos la rutina con productos de tu catálogo, lista para comprar.">
 <meta name="theme-color" content="#000000">
 <link rel="canonical" href="https://groomscan.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://groomscan.com/">
 <meta property="og:title" content="GroomScan · Del TikTok al carrito">
-<meta property="og:description" content="Tu cliente sube la foto del peinado que quiere. GroomScan le vende la rutina con productos de tu tienda. Se instala en dos minutos.">
+<meta property="og:description" content="Tu cliente sube la foto del peinado que quiere. GroomScan le recomienda la rutina con productos de tu tienda. Sin cuestionarios.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1578390432942-d323db577792?w=1200&h=630&fit=crop&crop=faces">
 <meta property="og:locale" content="es_ES">
 <meta property="og:locale:alternate" content="en_GB">
@@ -238,6 +238,7 @@ nav.main a:hover{color:var(--white)}
 .tabs button{background:none;border:0;padding:12px 18px;font-weight:600;cursor:pointer;border-radius:10px 10px 0 0;color:var(--steel-d)}
 .tabs button[aria-selected="true"]{background:var(--black);color:var(--white)}
 .panel{padding-top:22px}
+.sl.cur{display:flex;align-items:center;gap:8px;font-size:14px}.curb{border:1px solid currentColor;background:none;color:inherit;border-radius:8px;padding:4px 12px;font:inherit;cursor:pointer}.curb[aria-pressed=true]{background:var(--laser);color:var(--black);border-color:var(--laser)}
 .panel p{color:var(--steel-d);margin-bottom:16px;max-width:60ch}
 .flag{display:inline-block;background:var(--laser);color:#fff;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;margin-right:8px}
 .code{position:relative;background:var(--black);color:var(--white);border-radius:12px;padding:22px 20px;font:14px/1.7 var(--till);overflow-x:auto}
@@ -335,12 +336,12 @@ footer .made{margin-left:auto}
   <div class="wrap">
     <div>
       <h1 id="h-hero"><span data-i18n="h1a">Del TikTok</span><span data-i18n="h1b">al carrito.</span></h1>
-      <p class="lede" data-i18n="heroSub">Tu cliente sube la foto del peinado que quiere. En 10 segundos GroomScan le dice qué productos de tu tienda necesita, cómo usarlos y se los mete en el carrito.</p>
+      <p class="lede" data-i18n="heroSub">Tu cliente sube la foto del peinado que quiere. En unos segundos GroomScan le dice qué productos de tu tienda necesita, cómo usarlos y se los deja en el carrito.</p>
       <div class="ctas">
         <a class="btn btn-laser" href="#demo" data-i18n="heroCta1">Probarlo con mi tienda</a>
         <a class="btn btn-ghost" href="#cuentas" data-i18n="heroCta2">Calcular cuánto vendo</a>
       </div>
-      <p class="works"><span data-i18n="works">Funciona en</span> <b>Shopify</b> <b>WooCommerce</b> <b data-i18n="worksAny">cualquier web</b></p>
+      <p class="works"><span data-i18n="works">Hecho para</span> <b>Shopify</b> <b data-i18n="worksAny">WooCommerce en piloto</b></p>
     </div>
 
     <div class="scanner" id="scanner" role="img" aria-label="Ejemplo de GroomScan: foto de un peinado y el ticket con la rutina de productos recomendada" data-i18n-aria="scanAlt">
@@ -372,9 +373,9 @@ footer .made{margin-left:auto}
 <!-- STRIP -->
 <section class="strip" aria-label="Datos del producto" data-i18n-aria="stripAria">
   <div class="wrap"><ul>
-    <li><strong>10 s</strong><span data-i18n="s1">de la foto a la rutina</span></li>
+    <li><strong data-i18n="s1n">Segundos</strong><span data-i18n="s1">de la foto a la rutina</span></li>
     <li><strong>2–4</strong><span data-i18n="s2">productos por venta, no uno</span></li>
-    <li><strong>0</strong><span data-i18n="s3">fotos guardadas</span></li>
+    <li><strong>1</strong><span data-i18n="s3">foto, sin cuestionarios</span></li>
     <li><strong>6</strong><span data-i18n="s4">idiomas incluidos</span></li>
   </ul></div>
 </section>
@@ -398,8 +399,8 @@ footer .made{margin-left:auto}
       <p class="lede" data-i18n="howSub">Instalas una vez y GroomScan trabaja solo: lee tu catálogo, entiende la foto y llena el carrito.</p>
     </div>
     <ol class="how" style="border-color:var(--white)">
-      <li style="border-color:var(--rule-d)"><div class="n">1</div><h3 data-i18n="st1h">Lo instalas en dos minutos</h3><p style="color:var(--steel)" data-i18n="st1p">En Shopify con un botón. En el resto, pegando una línea. Lee tu catálogo solo: nada de exportar productos.</p></li>
-      <li style="border-color:var(--rule-d)"><div class="n">2</div><h3 data-i18n="st2h">Tu cliente sube la foto</h3><p style="color:var(--steel)" data-i18n="st2p">Su pelo, un famoso o una captura de TikTok. La IA lee el corte, el acabado, la fijación, el volumen y el tipo de pelo.</p></li>
+      <li style="border-color:var(--rule-d)"><div class="n">1</div><h3 data-i18n="st1h">Lo instalas sin tocar código</h3><p style="color:var(--steel)" data-i18n="st1p">En Shopify, desde la App Store y con un clic en el editor de temas. Lee tu catálogo solo: nada de exportar productos.</p></li>
+      <li style="border-color:var(--rule-d)"><div class="n">2</div><h3 data-i18n="st2h">Tu cliente sube la foto</h3><p style="color:var(--steel)" data-i18n="st2p">Su pelo, un famoso o una captura de TikTok. La IA lee el corte, el acabado, la fijación y el volumen del peinado.</p></li>
       <li style="border-color:var(--rule-d)"><div class="n">3</div><h3 data-i18n="st3h">Se lleva la rutina entera</h3><p style="color:var(--steel)" data-i18n="st3p">De 2 a 4 productos de tu tienda, con los pasos para peinarse y un botón que lo añade todo al carrito.</p></li>
     </ol>
   </div>
@@ -411,7 +412,7 @@ footer .made{margin-left:auto}
     <div>
       <h2 id="h-demo" data-i18n="demoH">Pruébalo con tu catálogo. Ahora.</h2>
       <p class="lede" data-i18n="demoSub">No es un vídeo. Es el widget real que verán tus clientes, leyendo los productos de tu tienda en este momento.</p>
-      <p class="note" data-i18n="demoNote">Funciona con cualquier tienda Shopify pública. La foto se analiza y se borra al momento.</p>
+      <p class="note" data-i18n="demoNote">Funciona con cualquier tienda Shopify pública. GroomScan no guarda la foto: la analiza una IA y nuestro proveedor la borra en un máximo de 30 días.</p>
     </div>
     <div class="stage">
       <p class="hint" data-i18n-html="demoHint">Escribe la web de tu tienda, sube una foto y mira qué productos de <b>tu</b> catálogo recomienda.</p>
@@ -425,23 +426,27 @@ footer .made{margin-left:auto}
   <div class="wrap">
     <div class="head-row">
       <h2 id="h-roi" data-i18n="roiH">Haz tus cuentas.</h2>
-      <p class="lede" data-i18n="roiSub">Mueve los números de tu tienda. Los valores de partida son prudentes: si tu tienda vende bien producto de peinado, te quedarás corto.</p>
+      <p class="lede" data-i18n="roiSub">Pon los números de tu tienda y mira con cuántas ventas adicionales se paga GroomScan. Los valores de partida son supuestos para empezar, no datos medidos.</p>
     </div>
     <div class="roi">
       <div class="sliders">
         <div class="sl"><label for="r-vis"><span data-i18n="r1">Visitas al mes en tu tienda</span><output id="o-vis" for="r-vis"></output></label><input type="range" id="r-vis" min="1000" max="200000" step="1000" value="10000"></div>
-        <div class="sl"><label for="r-use"><span data-i18n="r2">Visitas que usan el escáner</span><output id="o-use" for="r-use"></output></label><small data-i18n="r2s">Con el botón visible en la ficha y en la home suele estar entre el 2 y el 6 %.</small><input type="range" id="r-use" min="0.5" max="10" step="0.5" value="3"></div>
-        <div class="sl"><label for="r-conv"><span data-i18n="r3">Escaneos que acaban en compra</span><output id="o-conv" for="r-conv"></output></label><small data-i18n="r3s">Quien escanea ya tiene intención: sabe el peinado que quiere.</small><input type="range" id="r-conv" min="2" max="30" step="1" value="10"></div>
-        <div class="sl"><label for="r-tkt"><span data-i18n="r4">Importe medio de la rutina</span><output id="o-tkt" for="r-tkt"></output></label><input type="range" id="r-tkt" min="15" max="120" step="1" value="38"></div>
+        <div class="sl"><label for="r-use"><span data-i18n="r2">Visitantes que escanean</span><output id="o-use" for="r-use"></output></label><small data-i18n="r2s">Supuesto. Lo medimos en tu tienda.</small><input type="range" id="r-use" min="0.5" max="10" step="0.5" value="2"></div>
+        <div class="sl"><label for="r-conv"><span data-i18n="r3">Escaneos que acaban en compra</span><output id="o-conv" for="r-conv"></output></label><small data-i18n="r3s">Supuesto.</small><input type="range" id="r-conv" min="1" max="30" step="1" value="8"></div>
+        <div class="sl"><label for="r-tkt"><span data-i18n="r4">Ticket medio de esa compra</span><output id="o-tkt" for="r-tkt"></output></label><input type="range" id="r-tkt" min="15" max="120" step="1" value="38"></div>
+        <div class="sl"><label for="r-mrg"><span data-i18n="r5">Margen bruto de tu tienda</span><output id="o-mrg" for="r-mrg"></output></label><input type="range" id="r-mrg" min="10" max="80" step="5" value="40"></div>
+        <div class="sl"><label for="r-inc"><span data-i18n="r6">Ventas que no habrías hecho sin GroomScan</span><output id="o-inc" for="r-inc"></output></label><small data-i18n="r6s">Supuesto clave: el resto habría comprado igual.</small><input type="range" id="r-inc" min="5" max="100" step="5" value="25"></div>
+        <div class="sl cur" role="group" aria-label="Moneda" data-i18n-aria="curAria"><span data-i18n="curLbl">Moneda</span> <button type="button" class="curb" data-cur="EUR">€</button> <button type="button" class="curb" data-cur="USD">$</button></div>
       </div>
       <div class="receipt" aria-live="polite">
         <div class="row"><span data-i18n="rc1">Escaneos al mes</span><span id="c-scans"></span></div>
-        <div class="row"><span data-i18n="rc2">Rutinas vendidas</span><span id="c-orders"></span></div>
-        <hr>
-        <div class="muted" data-i18n="rc3">VENTAS AL MES CON GROOMSCAN</div>
-        <div class="big" id="c-rev"></div>
         <div class="row"><span id="c-planlbl"></span><span id="c-plan"></span></div>
+        <div class="row"><span data-i18n="rc2">Ventas en las que participa el escáner</span><span id="c-rev"></span></div>
+        <div class="row"><span data-i18n="rc4">Ventas adicionales estimadas</span><span id="c-inc"></span></div>
+        <div class="row"><span data-i18n="rc5">Beneficio adicional tras pagar el plan</span><span id="c-profit"></span></div>
+        <hr>
         <p class="pay" id="c-pay"></p>
+        <p class="muted" style="font-size:12px;line-height:1.45;margin-top:10px" data-i18n="roiNote">Simulación con los datos que tú pones, no una previsión. Aún no tenemos resultados medidos en tiendas: los valores iniciales son supuestos para empezar, no medias del sector. El precio del plan se convierte con un cambio orientativo (octubre de 2026: 1 $ ≈ 0,89 €).</p>
       </div>
     </div>
   </div>
@@ -450,13 +455,13 @@ footer .made{margin-left:auto}
 <!-- COMPARE -->
 <section class="dark" aria-labelledby="h-cmp">
   <div class="wrap">
-    <h2 id="h-cmp" data-i18n="cmpH">Una foto vende más que un test.</h2>
+    <h2 id="h-cmp" data-i18n="cmpH">Una foto en vez de un cuestionario.</h2>
     <div class="cmp-wrap">
       <table class="cmp">
         <thead><tr><th scope="col"><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)" data-i18n="cmp0">Comparativa</span></th><th scope="col" class="us">GroomScan</th><th scope="col" data-i18n="cmpQ">Test de producto</th><th scope="col" data-i18n="cmpN">Ficha normal</th></tr></thead>
         <tbody>
-          <tr><th scope="row" data-i18n="cr1">Qué hace el cliente</th><td class="us" data-i18n="c11">Sube una foto</td><td data-i18n="c12">Contesta 8 a 12 preguntas</td><td data-i18n="c13">Lee y adivina</td></tr>
-          <tr><th scope="row" data-i18n="cr2">Tiempo hasta la recomendación</th><td class="us" data-i18n="c21">10 segundos</td><td data-i18n="c22">2 a 3 minutos</td><td>–</td></tr>
+          <tr><th scope="row" data-i18n="cr1">Qué hace el cliente</th><td class="us" data-i18n="c11">Sube una foto</td><td data-i18n="c12">Contesta varias preguntas</td><td data-i18n="c13">Lee y adivina</td></tr>
+          <tr><th scope="row" data-i18n="cr2">Tiempo hasta la recomendación</th><td class="us" data-i18n="c21">Unos segundos</td><td data-i18n="c22">Lo que tarde en responder</td><td>–</td></tr>
           <tr><th scope="row" data-i18n="cr3">Entiende el peinado de TikTok</th><td class="us" data-i18n="yes">Sí</td><td data-i18n="no">No</td><td data-i18n="no">No</td></tr>
           <tr><th scope="row" data-i18n="cr4">Vende la rutina completa</th><td class="us" data-i18n="c41">Sí, con un botón</td><td data-i18n="c42">A veces</td><td data-i18n="c43">Un producto</td></tr>
           <tr><th scope="row" data-i18n="cr5">Prioriza tus productos de más margen</th><td class="us" data-i18n="yes">Sí</td><td data-i18n="c52">Configurándolo a mano</td><td data-i18n="no">No</td></tr>
@@ -472,7 +477,7 @@ footer .made{margin-left:auto}
   <div class="wrap">
     <div class="head-row">
       <h2 id="h-marca" data-i18n="custH">Con tu marca, no con la nuestra.</h2>
-      <p class="lede" data-i18n="custSub">Coge tus colores y tu letra solo. Puedes poner tu logo, elegir entre 6 formas de cabeza para el avatar y decidir cómo aparece: dentro de la página, como botón flotante o en una ventana.</p>
+      <p class="lede" data-i18n="custSub">Usa la letra de tu web. Eliges tus colores y tu logo, entre 6 formas de cabeza para el avatar y cómo aparece: dentro de la página, como botón flotante o en una ventana.</p>
     </div>
     <div class="looks">
       <figure class="look"><div class="card lk-a" aria-hidden="true"><div class="hd"><span class="lg">N</span>Navaja Supply</div><div class="drop" data-i18n="lkDrop">Sube la foto del peinado</div><div class="meta" data-i18n="lkMeta">3 escaneos por semana</div><div class="cta" data-i18n="lkBtn">Ver mi rutina</div></div><figcaption data-i18n="lk1">Oscuro y burdeos, dentro de la página.</figcaption></figure>
@@ -496,7 +501,7 @@ footer .made{margin-left:auto}
       <p class="lede" data-i18n="priceSub">Precios mensuales en dólares, cobrados en tu factura de Shopify. Empieza gratis y sube de plan cuando ya esté vendiendo.</p>
     </div>
     <div class="founder">
-      <div><h3 data-i18n="fdH">Programa de tiendas fundadoras</h3><p data-i18n="fdP">Las primeras tiendas se quedan el precio fundador para siempre y tienen el primer mes de pago gratis. A cambio, nos dejas una reseña honesta cuando lleves un mes usándolo.</p></div>
+      <div><h3 data-i18n="fdH">Programa de tiendas fundadoras</h3><p data-i18n="fdP">Las 50 primeras tiendas de pago mantienen el precio fundador mientras su suscripción siga activa sin interrupción. Oferta válida hasta el 31 de diciembre de 2026. Todos los planes de pago incluyen 7 días de prueba gratis.</p></div>
       <a class="btn" href="#alta" data-plan="starter" data-i18n="fdCta">Quiero ser fundadora</a>
     </div>
     <div class="plans">
@@ -508,7 +513,7 @@ footer .made{margin-left:auto}
         <a class="btn btn-ghost" href="#alta" data-plan="free" data-i18n="pCta0">Empezar gratis</a>
       </article>
       <article class="plan pop">
-        <span class="badge" data-i18n="pop">El más elegido</span>
+        <span class="badge" data-i18n="pop">Recomendado para empezar</span>
         <h3>Starter</h3>
         <div class="price">$29<small data-i18n="mo"> /mes</small></div><p class="later" data-i18n="was1">Precio fundador. Después, $39</p>
         <p class="scans" data-i18n="ps1">1.000 escaneos al mes</p>
@@ -530,9 +535,9 @@ footer .made{margin-left:auto}
         <a class="btn btn-ghost" href="#alta" data-plan="distribuidor" data-i18n="pCtaP">Elegir Pro</a>
       </article>
     </div>
-    <p class="plan-note"><b data-i18n="noLock">Sin permanencia. Cancela cuando quieras.</b><span data-i18n="noLock2">Si un mes te pasas de escaneos, no se corta: te avisamos para subir de plan.</span></p>
+    <p class="plan-note"><b data-i18n="noLock">Sin permanencia. Cancela cuando quieras.</b><span data-i18n="noLock2">Si llegas al límite del mes, el escáner se pausa hasta el mes siguiente o hasta que cambies de plan. Ves tu consumo en todo momento dentro de la app.</span></p>
     <div class="brands">
-      <div><h3 data-i18n="brH">¿Eres una marca o una cadena?</h3><p data-i18n="brP">GroomScan en marca blanca para varias webs, recomendando solo tus productos, con informe de tendencias por país. Contrato anual a medida.</p></div>
+      <div><h3 data-i18n="brH">¿Eres una marca o una cadena?</h3><p data-i18n="brP">GroomScan en marca blanca para varias webs, recomendando solo tus productos. Contrato anual a medida.</p></div>
       <a class="btn btn-ghost" href="mailto:hola@groomscan.com?subject=GroomScan%20para%20marcas" data-i18n="brCta">Escríbenos</a>
     </div>
   </div>
@@ -549,24 +554,23 @@ footer .made{margin-left:auto}
       <div class="tabs" role="tablist" aria-label="Plataforma" data-i18n-aria="platAria">
         <button role="tab" id="tab-sh" aria-controls="pn-sh" aria-selected="true">Shopify</button>
         <button role="tab" id="tab-wc" aria-controls="pn-wc" aria-selected="false" tabindex="-1">WooCommerce</button>
-        <button role="tab" id="tab-any" aria-controls="pn-any" aria-selected="false" tabindex="-1" data-i18n="tabAny">Cualquier web</button>
+        <button role="tab" id="tab-any" aria-controls="pn-any" aria-selected="false" tabindex="-1" data-i18n="tabAny">Otras webs</button>
       </div>
       <div class="panel" role="tabpanel" id="pn-sh" aria-labelledby="tab-sh">
         <ol class="big-steps">
           <li data-i18n="sh1">Instala GroomScan desde la Shopify App Store.</li>
-          <li data-i18n="sh2">Pulsa «Activar en mi tienda». Se abre el editor de tu tema con el escáner ya puesto.</li>
-          <li data-i18n="sh3">Guarda. Ya está en tu tienda, con tus colores.</li>
+          <li data-i18n="sh2">Pulsa «Abrir editor de temas»: el escáner ya aparece activado.</li>
+          <li data-i18n="sh3">Guarda. Ya está en tu tienda; los colores y el logo los cambias en ese mismo panel.</li>
         </ol>
-        <p style="margin-top:18px"><span class="flag" data-i18n="flag">App en revisión</span><span data-i18n="shTxt">Mientras Shopify la aprueba, te damos el código para pegarlo en tu tema en un minuto.</span></p>
+        <p style="margin-top:18px"><span class="flag" data-i18n="flag">App en revisión</span><span data-i18n="shTxt">Shopify la está revisando. Déjanos tu email abajo y te avisamos el día que se publique.</span></p>
       </div>
       <div class="panel" role="tabpanel" id="pn-wc" aria-labelledby="tab-wc" hidden>
-        <p data-i18n="wcTxt">Pégalo en el pie de tu tema o con cualquier plugin de «insertar código en el footer».</p>
+        <p data-i18n="wcTxt">Piloto: lee hasta 200 productos de tu tienda y enlaza cada recomendación con su producto (el carrito en un clic llega más adelante). Te damos la key al darte de alta.</p>
         <div class="code"><button class="copy" type="button" data-i18n="copy">Copiar</button><pre></pre></div>
         <ol><li data-i18n="wc1">Apariencia › Editor de temas › footer.php, o tu plugin de código.</li><li data-i18n="wc2">Pega el código antes de &lt;/body&gt; y guarda.</li></ol>
       </div>
       <div class="panel" role="tabpanel" id="pn-any" aria-labelledby="tab-any" hidden>
-        <p data-i18n="anyTxt">Funciona en cualquier web donde puedas pegar un script. Cambia data-mode a inline, floating o popup según cómo quieras mostrarlo.</p>
-        <div class="code"><button class="copy" type="button" data-i18n="copy">Copiar</button><pre></pre></div>
+        <p data-i18n="anyTxt">¿PrestaShop, Wix u otra plataforma? Escríbenos y lo estudiamos: hace falta conectar tu catálogo antes de que el escáner pueda recomendar.</p>
       </div>
     </div>
   </div>
@@ -577,13 +581,13 @@ footer .made{margin-left:auto}
   <div class="wrap">
     <h2 id="h-faq" data-i18n="faqH">Lo que nos preguntan las tiendas.</h2>
     <div class="faq">
-      <details><summary data-i18n="q1">¿Se guardan las fotos?</summary><p data-i18n="a1">No. La foto se analiza en el momento y se borra. No guardamos imágenes ni las usamos para entrenar nada.</p></details>
+      <details><summary data-i18n="q1">¿Se guardan las fotos?</summary><p data-i18n="a1">GroomScan no la guarda en sus sistemas ni la usa para entrenar ninguna IA. Para analizarla, se envía cifrada a nuestro proveedor de IA (Anthropic, en EE. UU.), que la elimina automáticamente en un plazo máximo de 30 días. Solo analizamos el pelo: no identificamos a nadie.</p></details>
       <details><summary data-i18n="q2">¿Recomienda productos que no vendo?</summary><p data-i18n="a2">Nunca. Solo recomienda productos de tu catálogo que estén a la venta. Lee tu tienda sola y se actualiza varias veces al día, así que las novedades y los agotados entran sin que hagas nada.</p></details>
       <details><summary data-i18n="q3">¿Puedo empujar mis productos de más margen?</summary><p data-i18n="a3">Sí. Pon la etiqueta groomscan-prioridad a los productos que quieras mover y GroomScan los elegirá primero siempre que encajen con el peinado. Nunca recomienda algo que no encaje solo porque esté marcado.</p></details>
-      <details><summary data-i18n="q4">¿Qué plataformas admite?</summary><p data-i18n="a4">Shopify, WooCommerce y cualquier web donde puedas pegar un script.</p></details>
-      <details><summary data-i18n="q5">¿Y si la foto no se ve bien?</summary><p data-i18n="a5">El escáner se lo dice al cliente y le pide otra antes de gastar el escaneo. Vale cualquier foto donde se vea el pelo: la suya, la de un famoso o una captura de TikTok.</p></details>
-      <details><summary data-i18n="q6">¿Cumple el RGPD?</summary><p data-i18n="a6">El cliente acepta antes de subir la foto. No guardamos imágenes ni identificamos a nadie: solo se analiza el pelo. Cada persona tiene un límite de escaneos por semana.</p></details>
-      <details><summary data-i18n="q7">¿Qué pasa si me paso de escaneos?</summary><p data-i18n="a7">El escáner no se apaga de golpe. Te avisamos al llegar al 80 % y al 100 % para que decidas si subir de plan.</p></details>
+      <details><summary data-i18n="q4">¿Qué plataformas admite?</summary><p data-i18n="a4">Shopify, con la app oficial (en revisión). WooCommerce, en piloto. Otras plataformas: escríbenos.</p></details>
+      <details><summary data-i18n="q5">¿Y si la foto no se ve bien?</summary><p data-i18n="a5">El escáner se lo dice al cliente y le pide otra. Vale cualquier foto donde se vea bien el pelo: la suya, la de un famoso o una captura de TikTok.</p></details>
+      <details><summary data-i18n="q6">¿Y la privacidad de tus clientes?</summary><p data-i18n="a6">El cliente acepta antes de subir la foto. GroomScan no guarda la foto ni identifica a nadie: la IA solo analiza el pelo, y nuestro proveedor de IA la borra en un máximo de 30 días. Cada persona tiene un límite de escaneos por semana. Tienes el detalle en la <a href="/privacidad">política de privacidad</a>.</p></details>
+      <details><summary data-i18n="q7">¿Qué pasa si me paso de escaneos?</summary><p data-i18n="a7">Al llegar al límite del mes, el escáner se pausa hasta el mes siguiente o hasta que cambies de plan. Puedes ver tu consumo en todo momento dentro de la app.</p></details>
       <details><summary data-i18n="q8">¿Puedo cancelar?</summary><p data-i18n="a8">Cuando quieras, sin permanencia. Cancelas desde Shopify y deja de cobrarse ese mes.</p></details>
     </div>
   </div>
@@ -593,8 +597,8 @@ footer .made{margin-left:auto}
 <section id="alta" class="dark" aria-labelledby="h-alta">
   <div class="wrap alta">
     <div>
-      <h2 id="h-alta" data-i18n="altaH">Ponlo en tu tienda esta semana.</h2>
-      <p class="lede" data-i18n="altaSub">Déjanos tus datos y te mandamos el acceso y el código listo para pegar.</p>
+      <h2 id="h-alta" data-i18n="altaH">Sé de las primeras tiendas.</h2>
+      <p class="lede" data-i18n="altaSub">Déjanos tus datos. Si usas Shopify, te mandamos el enlace para instalarlo en cuanto se publique en la App Store. Si usas otra plataforma, te contamos el piloto.</p>
       <ul class="perks">
         <li data-i18n="pk1">Respuesta en menos de 24 horas.</li>
         <li data-i18n="pk2">Empiezas gratis o con el plan que elijas.</li>
@@ -618,7 +622,7 @@ footer .made{margin-left:auto}
       </form>
       <div class="ok-state" tabindex="-1" id="okState">
         <h3 data-i18n="okH">Recibido.</h3>
-        <p data-i18n="okP">En menos de 24 horas te llega el acceso y el código a tu correo.</p>
+        <p data-i18n="okP">En menos de 24 horas te escribimos.</p>
       </div>
     </div>
   </div>
@@ -639,67 +643,67 @@ footer .made{margin-left:auto}
   var T={es:{},en:{
     skip:"Skip to content",nav1:"How it works",nav2:"Demo",nav6:"What you'll sell",nav3:"Pricing",nav4:"FAQ",nav5:"Customizer",cta:"Try it free",
     h1a:"From TikTok",h1b:"to checkout.",
-    heroSub:"Your customer uploads a photo of the hairstyle they want. In 10 seconds GroomScan tells them which products from your store they need, how to use them, and puts them in the cart.",
-    heroCta1:"Try it with my store",heroCta2:"Work out what I'd sell",works:"Works on",worksAny:"any website",
+    heroSub:"Your customer uploads a photo of the hairstyle they want. In seconds GroomScan tells them which products from your store they need, how to use them, and leaves them in the cart.",
+    heroCta1:"Try it with my store",heroCta2:"Work out what I'd sell",works:"Built for",worksAny:"WooCommerce in pilot",
     scanAlt:"GroomScan example: a hairstyle photo and the receipt with the recommended product routine",tag:"TikTok screenshot",tTotal:"ROUTINE TOTAL",tBuy:"Add routine to cart",
-    stripAria:"Product facts",s1:"from photo to routine",s2:"products per sale, not one",s3:"photos stored",s4:"languages included",
+    stripAria:"Product facts",s1n:"Seconds",s1:"from photo to routine",s2:"products per sale, not one",s3:"photo, no quiz",s4:"languages included",
     probH:"Your customer knows the hairstyle. Not what to buy.",
     probSub:"They arrive with a screenshot of a creator, see forty identical waxes and leave. Or they buy one, it doesn't look like the photo, and they never come back. GroomScan does on your site what a barber would do behind the counter.",
     quote:"“Customers always come in with the photo on their phone. Now the photo sells them the routine.”",quoteBy:"Barber with 12 years behind the chair, creator of GroomScan",
     howH:"Three steps. None of them yours.",howSub:"Install once and GroomScan runs by itself: it reads your catalogue, understands the photo and fills the cart.",
-    st1h:"Install it in two minutes",st1p:"One click on Shopify. Paste one line anywhere else. It reads your catalogue by itself: nothing to export.",
-    st2h:"Your customer uploads a photo",st2p:"Their own hair, a celebrity or a TikTok screenshot. The AI reads the cut, finish, hold, volume and hair type.",
+    st1h:"Install it without code",st1p:"On Shopify, from the App Store and one click in the theme editor. It reads your catalogue by itself: nothing to export.",
+    st2h:"Your customer uploads a photo",st2p:"Their own hair, a celebrity or a TikTok screenshot. The AI reads the cut, finish, hold and volume of the hairstyle.",
     st3h:"They take the whole routine",st3p:"2 to 4 products from your store, with styling steps and one button that adds everything to the cart.",
     demoH:"Try it with your catalogue. Now.",demoSub:"Not a video. It's the real widget your customers will see, reading your store's products right now.",
-    demoNote:"Works with any public Shopify store. The photo is analysed and deleted on the spot.",
+    demoNote:"Works with any public Shopify store. GroomScan doesn't store the photo: an AI analyses it and our provider deletes it within 30 days.",
     demoHint:"Type your store's address, upload a photo and see which products from <b>your</b> catalogue it recommends.",
     demoLoading:"Loading the scanner…",demoOffline:"The scanner couldn't load. Check your connection and reload the page.",
-    roiH:"Do the maths.",roiSub:"Move your store's numbers. The starting values are cautious: if your store sells styling products well, you'll beat them.",
-    r1:"Store visits per month",r2:"Visits that use the scanner",r2s:"With the button on product pages and the home page it's usually 2–6%.",r3:"Scans that end in a purchase",r3s:"People who scan already intend to buy: they know the style they want.",r4:"Average routine value",
-    rc1:"Scans per month",rc2:"Routines sold",rc3:"MONTHLY SALES WITH GROOMSCAN",planLbl:"Plan",pay:"Every <b>$1</b> on GroomScan brings back <b>{x}</b> in sales.",payFree:"It fits in the <b>free plan</b>. No cost.",
-    cmpH:"A photo sells more than a quiz.",cmp0:"Comparison",cmpQ:"Product quiz",cmpN:"Plain product page",
-    cr1:"What the customer does",c11:"Uploads a photo",c12:"Answers 8–12 questions",c13:"Reads and guesses",
-    cr2:"Time to recommendation",c21:"10 seconds",c22:"2–3 minutes",cr3:"Understands the TikTok hairstyle",yes:"Yes",no:"No",
+    roiH:"Run your own numbers.",roiSub:"Enter your store's numbers and see how many extra sales pay for GroomScan. The starting values are assumptions, not measured data.",
+    r1:"Store visits per month",r2:"Visitors who scan",r2s:"Assumption. We measure it on your store.",r3:"Scans that end in a purchase",r3s:"Assumption.",r4:"Average order value",r5:"Your gross margin",r6:"Sales you wouldn't have made without GroomScan",r6s:"Key assumption: the rest would have bought anyway.",curLbl:"Currency",curAria:"Currency",
+    rc1:"Scans per month",rc2:"Sales the scanner takes part in",rc4:"Estimated extra sales",rc5:"Extra profit after the plan",planLbl:"Plan that covers it:",pay:"With these numbers, <b>{plan}</b> pays for itself with <b>{n}</b> extra {sales} a month.",paySale1:"sale",paySaleN:"sales",payFree:"It fits in the <b>free plan</b>. No cost.",payBig:"Over 16,000 scans a month: <b>talk to us</b>.",roiNote:"A simulation based on your inputs, not a forecast. We don't have measured store results yet: the starting values are assumptions, not industry averages. Plan prices are converted at an approximate exchange rate (October 2026: $1 ≈ €0.89).",
+    cmpH:"A photo instead of a quiz.",cmp0:"Comparison",cmpQ:"Product quiz",cmpN:"Plain product page",
+    cr1:"What the customer does",c11:"Uploads a photo",c12:"Answers several questions",c13:"Reads and guesses",
+    cr2:"Time to recommendation",c21:"Seconds",c22:"As long as answering takes",cr3:"Understands the TikTok hairstyle",yes:"Yes",no:"No",
     cr4:"Sells the full routine",c41:"Yes, in one click",c42:"Sometimes",c43:"One product",
     cr5:"Pushes your highest-margin products",c52:"Set up by hand",cr6:"What you have to build",c61:"Nothing: it reads your catalogue",c62:"Questions, answers and rules",
-    custH:"With your brand, not ours.",custSub:"It picks up your colours and font by itself. Add your logo, choose from 6 avatar head shapes and decide how it appears: inline, as a floating button or as a pop-up.",
+    custH:"With your brand, not ours.",custSub:"It uses your site's font. Choose your colours and logo, one of 6 avatar head shapes and how it appears: inline, as a floating button or as a pop-up.",
     lkDrop:"Upload the hairstyle photo",lkMeta:"3 scans per week",lkBtn:"See my routine",lk1:"Dark and burgundy, inline.",lk2:"Black and white, floating button.",lk3:"Sage green, auto pop-up.",
     o1:"Spanish, English, Portuguese, French, Italian and German",o2:"Consent before uploading the photo",o3:"Scan limit per person",o4:"Textured crop, middle part, mullet, quiff, curls and more",
     priceH:"You pay for scans. That's it.",priceSub:"Monthly prices in US dollars, billed on your Shopify invoice. Start free and move up once it's already selling.",
-    fdH:"Founding stores programme",fdP:"Our first stores keep founder pricing for life and get their first paid month free. In return, leave us an honest review once you've used it for a month.",fdCta:"I want to be a founder",
+    fdH:"Founding stores programme",fdP:"The first 50 paying stores keep founder pricing for as long as their subscription stays active without a break. Offer valid until 31 December 2026. Every paid plan includes a 7-day free trial.",fdCta:"I want to be a founder",
     mo:" /mo",pf1:"50 scans a month",pf2:"The full scanner with your catalogue",pf4:"Prioritise your highest-margin products",pf3:"Shows “Powered by GroomScan”",pCta0:"Start free",
-    pop:"Most popular",was1:"Founder price. Later, $39",ps1:"1,000 scans a month",ps2:"No GroomScan branding",ps3:"Everything in Free",pCta:"Choose Starter",
+    pop:"Best place to start",was1:"Founder price. Later, $39",ps1:"1,000 scans a month",ps2:"No GroomScan branding",ps3:"Everything in Free",pCta:"Choose Starter",
     was2:"Founder price. Later, $99",pb1:"5,000 scans a month",pb2:"Everything in Starter",pb3:"Priority email support",pCtaB:"Choose Business",
     was3:"Founder price. Later, $249",pd1:"20,000 scans a month",pd2:"Everything in Business",pd3:"Built for high-traffic stores",pCtaP:"Choose Pro",
-    noLock:"No lock-in. Cancel anytime.",noLock2:"Go over your scans one month and nothing switches off: we let you know so you can move up.",
-    brH:"Are you a brand or a chain?",brP:"White-label GroomScan across several sites, recommending only your products, with trend reports by country. Annual contract, built for you.",brCta:"Email us",
+    noLock:"No lock-in. Cancel anytime.",noLock2:"If you reach your monthly limit, the scanner pauses until next month or until you change plan. You can see your usage in the app at any time.",
+    brH:"Are you a brand or a chain?",brP:"White-label GroomScan across several sites, recommending only your products. Annual contract, built for you.",brCta:"Email us",
     instH:"Installed before your coffee goes cold.",instSub:"No developers. No product exports. If you get stuck, we'll set it up for you.",platAria:"Platform",
-    tabAny:"Any website",sh1:"Install GroomScan from the Shopify App Store.",sh2:"Press “Turn on in my store”. Your theme editor opens with the scanner already in place.",sh3:"Save. It's live on your store, in your colours.",
-    flag:"App in review",shTxt:"While Shopify approves it, we'll give you the code to paste into your theme in a minute.",copy:"Copy",copied:"Copied",
-    wcTxt:"Paste it in your theme footer or with any “insert code in footer” plugin.",wc1:"Appearance › Theme editor › footer.php, or your code plugin.",wc2:"Paste the code before &lt;/body&gt; and save.",
-    anyTxt:"Works on any site where you can paste a script. Set data-mode to inline, floating or popup depending on how you want it shown.",
+    tabAny:"Other sites",sh1:"Install GroomScan from the Shopify App Store.",sh2:"Press “Open theme editor”: the scanner is already switched on.",sh3:"Save. It's live on your store; change colours and logo in the same panel.",
+    flag:"App in review",shTxt:"Shopify is reviewing it. Leave your email below and we'll tell you the day it goes live.",copy:"Copy",copied:"Copied",
+    wcTxt:"Pilot: it reads up to 200 products from your store and links each recommendation to its product (one-click cart comes later). We send your key when you sign up.",wc1:"Appearance › Theme editor › footer.php, or your code plugin.",wc2:"Paste the code before &lt;/body&gt; and save.",
+    anyTxt:"PrestaShop, Wix or another platform? Get in touch and we'll look at it: your catalogue has to be connected before the scanner can recommend.",
     faqH:"What stores ask us.",
-    q1:"Are photos stored?",a1:"No. The photo is analysed on the spot and deleted. We don't keep images or use them to train anything.",
+    q1:"Are photos stored?",a1:"GroomScan doesn't store it on its systems or use it to train any AI. To analyse it, it is sent encrypted to our AI provider (Anthropic, in the US), which deletes it automatically within 30 days. We only look at the hair; we don't identify anyone.",
     q2:"Will it recommend products I don't sell?",a2:"Never. It only recommends products from your catalogue that are for sale. It reads your store by itself and refreshes several times a day, so new arrivals and sold-out items are handled without you.",
     q3:"Can I push my highest-margin products?",a3:"Yes. Tag the products you want to move with groomscan-prioridad and GroomScan picks them first whenever they suit the hairstyle. It never recommends something that doesn't fit just because it's tagged.",
-    q4:"Which platforms does it support?",a4:"Shopify, WooCommerce and any site where you can paste a script.",
-    q5:"What if the photo isn't clear?",a5:"The scanner tells the customer and asks for another one before using up the scan. Any photo where the hair is visible works: theirs, a celebrity's or a TikTok screenshot.",
-    q6:"Is it GDPR compliant?",a6:"Customers agree before uploading the photo. We don't store images or identify anyone: only the hair is analysed. Each person has a weekly scan limit.",
-    q7:"What if I go over my scans?",a7:"The scanner doesn't cut out. We let you know at 80% and 100% so you can decide whether to move up a plan.",
+    q4:"Which platforms does it support?",a4:"Shopify, with the official app (in review). WooCommerce, in pilot. Other platforms: get in touch.",
+    q5:"What if the photo isn't clear?",a5:"The scanner tells the customer and asks for another one. Any photo where the hair is clearly visible works: theirs, a celebrity's or a TikTok screenshot.",
+    q6:"What about your customers' privacy?",a6:"Customers agree before uploading the photo. GroomScan doesn't store the photo or identify anyone: the AI only looks at the hair, and our AI provider deletes the photo within 30 days. Each person has a weekly scan limit. Full details in the <a href=\"/privacidad\">privacy policy</a>.",
+    q7:"What if I go over my scans?",a7:"When you reach your monthly limit, the scanner pauses until next month or until you change plan. You can see your usage in the app at any time.",
     q8:"Can I cancel?",a8:"Whenever you like, no lock-in. Cancel from Shopify and billing stops that month.",
-    altaH:"Put it on your store this week.",altaSub:"Leave your details and we'll send your access and the code ready to paste.",
+    altaH:"Be one of the first stores.",altaSub:"Leave your details. On Shopify, we'll send you the install link as soon as it's live on the App Store. On another platform, we'll tell you about the pilot.",
     pk1:"Reply within 24 hours.",pk2:"Start free or on the plan you choose.",pk3:"If installing gets tricky, we'll set it up for you.",
     fNombre:"Name",fEmail:"Email",fWeb:"Store website",fPlat:"Platform",fOtra:"Other",fPlan:"Plan",fMsg:"Message (optional)",fMsgPh:"What you sell, how many visits you get, or any question.",
     fConsent:"I agree that GroomScan may use this data to contact me about my sign-up, under the <a href=\"/privacidad\">privacy policy</a>.",
     fSend:"I want GroomScan on my store",fSending:"Sending…",
     eEmail:"Enter a valid email, like name@store.com.",eWeb:"Enter your store's address.",eOk:"Tick the box to accept the privacy policy.",eName:"Enter your name.",
     eNet:"It couldn't be sent. Check your connection and try again.",eServer:"It couldn't be processed: ",
-    okH:"Got it.",okP:"Your access and code will reach your inbox within 24 hours.",
+    okH:"Got it.",okP:"We'll write to you within 24 hours.",
     priv:"Privacy",made:"© 2026 GroomScan. Made in Spain by barbers."
   }};
-  var ES_EXTRA={copied:"Copiado",fSending:"Enviando…",eEmail:"Escribe un email válido, como nombre@tienda.com.",eWeb:"Escribe la dirección de tu tienda.",eOk:"Marca la casilla para aceptar la política de privacidad.",eName:"Escribe tu nombre.",eNet:"No se ha podido enviar. Revisa tu conexión y vuelve a intentarlo.",eServer:"No se ha podido procesar: ",demoOffline:"El escáner no ha cargado. Revisa tu conexión y recarga la página.",planLbl:"Plan",pay:"Cada <b>1 $</b> en GroomScan te devuelve <b>{x}</b> en ventas.",payFree:"Te cabe en el <b>plan gratis</b>. Coste cero."};
+  var ES_EXTRA={copied:"Copiado",fSending:"Enviando…",eEmail:"Escribe un email válido, como nombre@tienda.com.",eWeb:"Escribe la dirección de tu tienda.",eOk:"Marca la casilla para aceptar la política de privacidad.",eName:"Escribe tu nombre.",eNet:"No se ha podido enviar. Revisa tu conexión y vuelve a intentarlo.",eServer:"No se ha podido procesar: ",demoOffline:"El escáner no ha cargado. Revisa tu conexión y recarga la página.",planLbl:"Plan que lo cubre:",pay:"Con estos datos, <b>{plan}</b> se paga con <b>{n}</b> {sales} adicional{es} al mes.",paySale1:"venta",paySaleN:"ventas",payFree:"Te cabe en el <b>plan gratis</b>. Coste cero.",payBig:"Más de 16.000 escaneos al mes: <b>escríbenos</b>."};
   var META={es:{title:document.title,desc:document.querySelector('meta[name=description]').content},
-    en:{title:"GroomScan · From TikTok to checkout",desc:"GroomScan is the hairstyle scanner for hair and grooming stores: customers upload a photo of the style they want and get the exact routine from your catalogue in 10 seconds, ready to buy."}};
+    en:{title:"GroomScan · From TikTok to checkout",desc:"GroomScan is the hairstyle scanner for hair and grooming stores: customers upload a photo of the style they want and get a routine from your catalogue in seconds, ready to buy."}};
 
   function each(s,f){Array.prototype.forEach.call(document.querySelectorAll(s),f)}
   each('[data-i18n]',function(el){var k=el.getAttribute('data-i18n');if(!(k in T.es))T.es[k]=el.innerHTML});
@@ -710,6 +714,7 @@ footer .made{margin-left:auto}
 
   var lang='es';
   try{var sv=localStorage.getItem('gs-lang');if(sv==='en'||sv==='es')lang=sv;else if(!sv&&!/^es\b/i.test(navigator.language||'es'))lang='en'}catch(e){}
+  try{var qp=new URLSearchParams(location.search).get('lang');if(qp==='en'||qp==='es')lang=qp}catch(e){}
   function t(k){return (T[lang]&&T[lang][k]!=null)?T[lang][k]:T.es[k]}
   function apply(){
     each('[data-i18n]',function(el){var v=t(el.getAttribute('data-i18n'));if(v!=null)el.innerHTML=v});
@@ -722,7 +727,9 @@ footer .made{margin-left:auto}
     b.setAttribute('aria-label',lang==='en'?'Cambiar a español':'Switch to English');
     renderTicket(cur,false);calc();
   }
-  document.getElementById('langBtn').addEventListener('click',function(){lang=lang==='es'?'en':'es';try{localStorage.setItem('gs-lang',lang)}catch(e){}apply()});
+  document.getElementById('langBtn').addEventListener('click',function(){lang=lang==='es'?'en':'es';var saved=false;try{localStorage.setItem('gs-lang',lang);saved=localStorage.getItem('gs-lang')===lang}catch(e){}
+    /* the demo scanner reads the language once when it loads: reload so it restarts in the new language */
+    if(saved){location.reload()}else{var u=new URL(location.href);u.searchParams.set('lang',lang);location.href=u.toString()}});
 
   /* ---------- hero scanner ---------- */
   var STYLES=[
@@ -758,19 +765,30 @@ footer .made{margin-left:auto}
 
   /* ---------- ROI ---------- */
   var PLANS=[{n:'Free',s:50,c:0},{n:'Starter',s:1000,c:29},{n:'Business',s:5000,c:79},{n:'Pro',s:20000,c:199}];
+  var USD_EUR=0.89; /* orientativo, octubre de 2026 */
+  var CUR=null;
   function $(id){return document.getElementById(id)}
   function fmtN(n){return Math.round(n).toLocaleString(lang==='en'?'en-GB':'es-ES')}
-  function fmtE(n){return lang==='en'?'€'+fmtN(n):fmtN(n)+' €'}
+  function fmtM(n){var c=CUR||(lang==='en'?'USD':'EUR'),sym=c==='USD'?'$':'€',neg=n<0,v=fmtN(Math.abs(n));var out=lang==='en'?sym+v:v+' '+sym;return (neg?'−':'')+out}
   function calc(){
-    var v=+$('r-vis').value,u=+$('r-use').value,c=+$('r-conv').value,tk=+$('r-tkt').value;
-    $('o-vis').textContent=fmtN(v);$('o-use').textContent=(lang==='en'?u:String(u).replace('.',','))+' %';$('o-conv').textContent=c+' %';$('o-tkt').textContent=fmtE(tk);
-    var scans=v*u/100,orders=scans*c/100,rev=orders*tk;
-    var plan=PLANS[PLANS.length-1];for(var i=0;i<PLANS.length;i++){if(scans<=PLANS[i].s){plan=PLANS[i];break}}
-    $('c-scans').textContent=fmtN(scans);$('c-orders').textContent=fmtN(orders);$('c-rev').textContent=fmtE(rev);
-    $('c-planlbl').textContent=t('planLbl')+' '+plan.n;$('c-plan').textContent='$'+plan.c;
-    $('c-pay').innerHTML=plan.c===0?t('payFree'):t('pay').replace('{x}',fmtE(rev/plan.c));
+    var cur=CUR||(lang==='en'?'USD':'EUR');
+    each('.curb',function(b){b.setAttribute('aria-pressed',b.getAttribute('data-cur')===cur)});
+    var v=+$('r-vis').value,u=+$('r-use').value,c=+$('r-conv').value,tk=+$('r-tkt').value,mg=+$('r-mrg').value,inc=+$('r-inc').value;
+    $('o-vis').textContent=fmtN(v);$('o-use').textContent=(lang==='en'?u:String(u).replace('.',','))+' %';$('o-conv').textContent=c+' %';$('o-tkt').textContent=fmtM(tk);$('o-mrg').textContent=mg+' %';$('o-inc').textContent=inc+' %';
+    var scans=v*u/100,orders=scans*c/100,rev=orders*tk,extra=rev*inc/100;
+    /* plan that covers the scans with 20 % headroom */
+    var plan=null;for(var i=0;i<PLANS.length;i++){if(scans<=PLANS[i].s*0.8){plan=PLANS[i];break}}
+    var cost=plan?(cur==='USD'?plan.c:plan.c*USD_EUR):0,profit=extra*mg/100-cost;
+    $('c-scans').textContent=fmtN(scans);$('c-rev').textContent=fmtM(rev);$('c-inc').textContent=fmtM(extra);
+    $('c-planlbl').textContent=t('planLbl');
+    if(!plan){$('c-plan').textContent='—';$('c-profit').textContent='—';$('c-pay').innerHTML=t('payBig');return}
+    $('c-plan').textContent=plan.n+' · $'+plan.c;$('c-profit').textContent=fmtM(profit);
+    if(plan.c===0){$('c-pay').innerHTML=t('payFree');return}
+    var n=Math.max(1,Math.ceil(cost/(tk*mg/100)));
+    $('c-pay').innerHTML=t('pay').replace('{plan}',plan.n).replace('{n}',fmtN(n)).replace('{sales}',n===1?t('paySale1'):t('paySaleN')).replace('{es}',n===1?'':'es');
   }
-  ['r-vis','r-use','r-conv','r-tkt'].forEach(function(id){$(id).addEventListener('input',calc)});
+  ['r-vis','r-use','r-conv','r-tkt','r-mrg','r-inc'].forEach(function(id){$(id).addEventListener('input',calc)});
+  each('.curb',function(b){b.addEventListener('click',function(){CUR=b.getAttribute('data-cur');calc()})});
   calc();
   if(lang!=='es')apply();
 

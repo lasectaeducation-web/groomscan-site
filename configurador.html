@@ -90,7 +90,7 @@ pre{margin:0;background:var(--ink);color:#f4f1ec;border-radius:12px;padding:14px
       <h2>Tu código</h2>
       <pre id="code"></pre>
       <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap"><button class="btn" id="copy" type="button">Copiar código</button><button class="btn s" id="reset" type="button">Restablecer</button></div>
-      <p class="hint">Shopify: Tienda online → Temas → Editar código → <b>theme.liquid</b>, pégalo justo antes de <code>&lt;/body&gt;</code>. WordPress/WooCommerce: en el pie de página o con un plugin de "insertar código". Modo "dentro de una página": pon también <code>&lt;div id="groomscan"&gt;&lt;/div&gt;</code> donde quieras que salga.</p>
+      <p class="hint">Shopify: no pegues código en el tema; GroomScan se instala con la app oficial desde la Shopify App Store (ahora en revisión). WordPress/WooCommerce (piloto): en el pie de página o con un plugin de "insertar código". Modo "dentro de una página": pon también <code>&lt;div id="groomscan"&gt;&lt;/div&gt;</code> donde quieras que salga.</p>
     </div>
   </section>
 
@@ -124,7 +124,7 @@ pre{margin:0;background:var(--ink);color:#f4f1ec;border-radius:12px;padding:14px
   [['key','key'],['lang','lang'],['pos','position'],['logo','logo'],['font','font'],['radius','radius'],['title','title'],['btn','button']].forEach(function(p){$(p[0]).addEventListener('change',function(){st[p[1]]=this.value.trim()||(p[1]==='key'?'demo':(p[1]==='font'?'inherit':''));sync()});});
   function attrs(forPreview){
     var a=['data-key="'+esc(st.key||'demo')+'"','data-mode="'+st.mode+'"','data-color="'+st.color+'"','data-accent="'+st.accent+'"','data-bg="'+st.bg+'"','data-text="'+st.text+'"'];
-    if(st.lang!=='es'||forPreview)a.push('data-lang="'+st.lang+'"');
+    a.push('data-lang="'+st.lang+'"'); /* siempre explícito: si no, el escáner sigue el idioma de la web */
     if(st.position!=='right')a.push('data-position="'+st.position+'"');
     if(st.logo)a.push('data-logo="'+esc(st.logo)+'"');
     if(st.font!=='inherit')a.push('data-font="'+esc(st.font)+'"');

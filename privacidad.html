@@ -12,7 +12,7 @@ a{color:var(--ember)}code{background:rgba(14,14,14,.06);padding:1px 5px;border-r
 .t{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
 hr{border:0}footer{text-align:center;color:var(--smoke);font-size:14px;padding:24px}
 </style></head><body><header><a href="/" style="display:inline-flex;align-items:center;gap:10px"><svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect x="1.27" y="7.02" width="29.46" height="4.29" rx="1.56" fill="#F4F1EC"/><rect x="2.6" y="10.15" width="1.48" height="14.83" rx="0.74" fill="#F4F1EC"/><rect x="4.74" y="10.15" width="0.62" height="13.27" rx="0.31" fill="#F4F1EC"/><rect x="6.03" y="10.15" width="0.62" height="13.27" rx="0.31" fill="#F4F1EC"/><rect x="7.32" y="10.15" width="1.48" height="14.83" rx="0.74" fill="#F4F1EC"/><rect x="9.46" y="10.15" width="0.62" height="13.27" rx="0.31" fill="#F4F1EC"/><rect x="10.75" y="10.15" width="1.48" height="14.83" rx="0.74" fill="#F4F1EC"/><rect x="12.9" y="10.15" width="1.48" height="14.83" rx="0.74" fill="#F4F1EC"/><rect x="15.04" y="10.15" width="0.62" height="13.27" rx="0.31" fill="#F4F1EC"/><rect x="16.33" y="10.15" width="0.62" height="13.27" rx="0.31" fill="#F4F1EC"/><rect x="17.62" y="10.15" width="1.48" height="14.83" rx="0.74" fill="#F4F1EC"/><rect x="19.77" y="10.15" width="0.62" height="13.27" rx="0.31" fill="#F4F1EC"/><rect x="21.05" y="10.15" width="0.62" height="13.27" rx="0.31" fill="#F4F1EC"/><rect x="22.34" y="10.15" width="1.48" height="14.83" rx="0.74" fill="#F4F1EC"/><rect x="24.49" y="10.15" width="1.48" height="14.83" rx="0.74" fill="#F4F1EC"/><rect x="26.63" y="10.15" width="0.62" height="13.27" rx="0.31" fill="#F4F1EC"/><rect x="27.92" y="10.15" width="1.48" height="14.83" rx="0.74" fill="#F4F1EC"/><rect x="0.2" y="18.15" width="31.61" height="1.17" rx="0.59" fill="#E4572E"/></svg>GroomScan</a></header><main><h1>Privacy Policy / Política de privacidad</h1>
-<p>Last updated / Última actualización: 14/10/2026</p>
+<p>Last updated / Última actualización: 16/10/2026</p>
 <hr />
 <h2>English</h2>
 <h3>1. Who we are</h3>
@@ -26,7 +26,7 @@ hr{border:0}footer{text-align:center;color:var(--smoke);font-size:14px;padding:2
 </li>
 </ul>
 <h3>2. What GroomScan does</h3>
-<p>Merchants add a widget to their Shopify store. A shopper may upload a photo of a hairstyle. The App analyses the photo and recommends products from that merchant's catalogue.</p>
+<p>Merchants add a widget to their Shopify store. A shopper may upload a photo of a hairstyle. The App analyses the photo and recommends products from that merchant's catalogue. This policy also covers our website groomscan.com, its public demo and its sign-up form.</p>
 <h3>3. Data we process</h3>
 <p><strong>3.1 Merchants (installing the App)</strong></p>
 <ul>
@@ -50,7 +50,7 @@ We do <strong>not</strong> access orders, customers or other Admin data: the App
 <p><strong>3.2 Shoppers (store visitors using the widget)</strong></p>
 <ul>
 <li>
-<p><strong>Photo:</strong> sent only after the shopper ticks the consent box. It is processed in memory to estimate hairstyle parameters (style, texture, hold, finish, volume) and choose products, and then <strong>discarded. Photos are never stored</strong> by GroomScan or by the app.</p>
+<p><strong>Photo:</strong> sent only after the shopper ticks the consent box. It is processed in memory to estimate hairstyle parameters (style, texture, hold, finish, volume) and choose products, then discarded. <strong>GroomScan does not store the photo.</strong> To analyse it, the photo is sent encrypted to our AI provider, Anthropic (USA). Under Anthropic's API terms, inputs and outputs are deleted automatically within 30 days (longer only if flagged under Anthropic's usage policy) and are not used to train its models by default.</p>
 </li>
 <li>
 <p><strong>Random device identifier:</strong> a random value created in the shopper's browser (<code>localStorage</code>, key <code>gs_device</code>) to apply fair-use limits (scans per user). It does not contain names, emails or any information from the shopper's Shopify account.</p>
@@ -111,7 +111,7 @@ We do <strong>not</strong> collect Shopify customer data (names, emails, address
 </tr>
 <tr>
 <td>Anthropic PBC</td>
-<td>AI analysis of the photo (not stored; under its commercial API terms, inputs are not used for model training by default)</td>
+<td>AI analysis of the photo (deleted by Anthropic within 30 days; not used for model training by default)</td>
 <td>USA</td>
 </tr>
 <tr>
@@ -130,6 +130,11 @@ We do <strong>not</strong> collect Shopify customer data (names, emails, address
 <td>EU (Amsterdam)</td>
 </tr>
 <tr>
+<td>Cloudflare, Inc.</td>
+<td>Website hosting and email forwarding for groomscan.com</td>
+<td>Global network</td>
+</tr>
+<tr>
 <td>Transfers outside the EEA rely on the European Commission's Standard Contractual Clauses and/or the EU-US Data Privacy Framework where the provider is certified.</td>
 <td></td>
 <td></td>
@@ -139,20 +144,20 @@ We do <strong>not</strong> collect Shopify customer data (names, emails, address
 <h3>6. Retention</h3>
 <ul>
 <li>
-<p>Photos: not retained (deleted right after analysis).</p>
+<p>Photos: not retained by GroomScan; deleted by Anthropic within 30 days.</p><p>Fair-use data: a hashed form of the IP address and the random device identifier, kept for 7 days (1 day in the website demo).</p><p>Sign-up form: name, email, store website, platform, plan and message, kept while we handle your request and for up to 12 months afterwards.</p>
 </li>
 <li>
 <p>Scan logs: 12 months, then deleted or aggregated anonymously.</p>
 </li>
 <li>
-<p>Merchant data: while the App is installed. When a merchant uninstalls, sessions are deleted immediately and all shop data is deleted when Shopify sends the <code>shop/redact</code> request (48 hours after uninstall).</p>
+<p>Merchant data: while the App is installed. When a merchant uninstalls, sessions are deleted immediately and all shop data held by the App is deleted when Shopify sends the <code>shop/redact</code> request (48 hours after uninstall); the store's record and scan logs in our recommendation service are deleted within 30 days of that request.</p>
 </li>
 <li>
 <p>Billing records: as required by tax law.</p>
 </li>
 </ul>
 <h3>7. Shopify privacy requests</h3>
-<p>We implement Shopify's mandatory privacy webhooks: <code>customers/data_request</code> and <code>customers/redact</code> (we hold no Shopify customer data, so there is nothing to export or erase; requests are logged) and <code>shop/redact</code> (all shop data is deleted).</p>
+<p>We implement Shopify's mandatory privacy webhooks: <code>customers/data_request</code> and <code>customers/redact</code> (we hold no Shopify customer data, so there is nothing to export or erase; requests are logged) and <code>shop/redact</code> (all shop data is deleted as described in section 6).</p>
 <h3>8. Your rights</h3>
 <p>You can request access, rectification, erasure, restriction, portability or object to processing by writing to <strong>hola@groomscan.com</strong>. Shoppers can also contact the merchant's store, which is the controller of its customers' data; we will assist the merchant. Shoppers can delete the device identifier at any time by clearing their browser's site data. You may complain to a supervisory authority (in Spain: Agencia Española de Protección de Datos, www.aepd.es).</p>
 <h3>9. Security</h3>
@@ -166,13 +171,13 @@ We do <strong>not</strong> collect Shopify customer data (names, emails, address
 <h3>1. Quiénes somos</h3>
 <p>GroomScan ("la App") la presta <strong>Juan Antonio Cachazo Prieto (NIF 04231555S), Cedillo del Condado (Toledo), España</strong>, contacto: <strong>hola@groomscan.com</strong>. Actuamos como <strong>responsable</strong> de los datos de los comerciantes y como <strong>encargado del tratamiento por cuenta del comerciante</strong> para los datos de los visitantes de su tienda (el comerciante es el responsable respecto a sus clientes).</p>
 <h3>2. Qué hace GroomScan</h3>
-<p>El comerciante añade un widget a su tienda Shopify. El cliente puede subir una foto de un peinado; la App la analiza y recomienda productos del catálogo de esa tienda.</p>
+<p>El comerciante añade un widget a su tienda Shopify. El cliente puede subir una foto de un peinado; la App la analiza y recomienda productos del catálogo de esa tienda. Esta política cubre también la web groomscan.com, su demo pública y su formulario de alta.</p>
 <h3>3. Datos que tratamos</h3>
 <p><strong>Comerciantes:</strong> dominio y nombre de la tienda, dominio principal, moneda, si es tienda de desarrollo, plan e ID de suscripción, clave de la App, pasos del onboarding, tokens de acceso de Shopify necesarios para la App y uso agregado. No accedemos a pedidos ni clientes: la App no pide scopes de la Admin API.</p>
 <p><strong>Clientes de la tienda:</strong></p>
 <ul>
 <li>
-<p><strong>Foto:</strong> solo se envía si el cliente marca la casilla de consentimiento. Se procesa en memoria para estimar parámetros del peinado (estilo, textura, fijación, acabado, volumen) y elegir productos, y después <strong>se descarta. Las fotos no se guardan nunca.</strong></p>
+<p><strong>Foto:</strong> solo se envía si el cliente marca la casilla de consentimiento. Se procesa en memoria para estimar parámetros del peinado (estilo, textura, fijación, acabado, volumen) y elegir productos, y después se descarta. <strong>GroomScan no guarda la foto.</strong> Para analizarla, se envía cifrada a nuestro proveedor de IA, Anthropic (EE. UU.). Según las condiciones de su API, Anthropic borra automáticamente las entradas y salidas en un máximo de 30 días (más solo si se marcan por su política de uso) y por defecto no las usa para entrenar sus modelos.</p>
 </li>
 <li>
 <p><strong>Identificador aleatorio del dispositivo:</strong> un valor aleatorio creado en el navegador (<code>localStorage</code>, clave <code>gs_device</code>) para aplicar límites de uso. No contiene nombre, email ni datos de la cuenta del cliente.</p>
@@ -188,9 +193,9 @@ No recogemos datos de clientes de Shopify ni usamos los datos para publicidad o 
 <h3>4. Finalidades y bases legales (RGPD)</h3>
 <p>Prestación del servicio y cobro: ejecución del contrato (art. 6.1.b). Análisis de la foto: consentimiento del cliente en el widget (art. 6.1.a), por cuenta del comerciante. Límites de uso, seguridad y calidad: interés legítimo (art. 6.1.f). Obligaciones legales y fiscales (art. 6.1.c). No se realiza identificación biométrica ni reconocimiento facial.</p>
 <h3>5. Subencargados</h3>
-<p>Shopify (plataforma y cobro), Anthropic PBC (análisis de la foto con IA, EE. UU., sin almacenamiento), n8n GmbH (flujo de recomendación, UE), Google LLC (registro de tiendas y de escaneos), Fly.io, Inc. (alojamiento de la App, UE). Las transferencias fuera del EEE se amparan en las Cláusulas Contractuales Tipo de la Comisión Europea o en el Marco de Privacidad de Datos UE-EE. UU. cuando el proveedor está certificado.</p>
+<p>Shopify (plataforma y cobro), Anthropic PBC (análisis de la foto con IA, EE. UU.; la borra en un máximo de 30 días y no la usa para entrenar por defecto), n8n GmbH (flujo de recomendación, UE), Google LLC (registro de tiendas y de escaneos), Fly.io, Inc. (alojamiento de la App, UE), Cloudflare, Inc. (web groomscan.com y reenvío de correo). Las transferencias fuera del EEE se amparan en las Cláusulas Contractuales Tipo de la Comisión Europea o en el Marco de Privacidad de Datos UE-EE. UU. cuando el proveedor está certificado.</p>
 <h3>6. Conservación</h3>
-<p>Fotos: no se conservan. Registros de escaneos: 12 meses y luego se borran o se anonimizan. Datos del comerciante: mientras la App esté instalada; al desinstalar se borran las sesiones y, con el aviso <code>shop/redact</code> de Shopify (48 h después), todos los datos de la tienda. Datos de facturación: lo que exija la ley fiscal.</p>
+<p>Fotos: GroomScan no las conserva; Anthropic las borra en un máximo de 30 días. Datos de uso justo: la IP en forma de código (hash) y el identificador aleatorio, durante 7 días (1 día en la demo de la web). Formulario de alta: nombre, email, web, plataforma, plan y mensaje, mientras gestionamos tu solicitud y hasta 12 meses después. Registros de escaneos: 12 meses y luego se borran o se anonimizan. Datos del comerciante: mientras la App esté instalada; al desinstalar se borran las sesiones y, con el aviso <code>shop/redact</code> de Shopify (48 h después), todos los datos de la tienda en la App; el registro de la tienda y sus escaneos en nuestro servicio de recomendación se borran en un máximo de 30 días desde ese aviso. Datos de facturación: lo que exija la ley fiscal.</p>
 <h3>7. Solicitudes de privacidad de Shopify</h3>
 <p><code>customers/data_request</code> y <code>customers/redact</code>: no guardamos datos de clientes de Shopify; se registran. <code>shop/redact</code>: se borran todos los datos de la tienda.</p>
 <h3>8. Tus derechos</h3>
