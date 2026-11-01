@@ -7,11 +7,14 @@
 <meta name="description" content="GroomScan es el escáner de peinados para tiendas online de productos de peluquería y barbería. Tu cliente sube la foto del peinado que quiere y recibe en unos segundos la rutina con productos de tu catálogo, lista para comprar.">
 <meta name="theme-color" content="#000000">
 <link rel="canonical" href="https://groomscan.com/">
+<link rel="alternate" hreflang="es" href="https://groomscan.com/">
+<link rel="alternate" hreflang="en" href="https://groomscan.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://groomscan.com/en/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://groomscan.com/">
 <meta property="og:title" content="GroomScan · Del TikTok al carrito">
 <meta property="og:description" content="Tu cliente sube la foto del peinado que quiere. GroomScan le recomienda la rutina con productos de tu tienda. Sin cuestionarios.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1578390432942-d323db577792?w=1200&h=630&fit=crop&crop=faces">
+<meta property="og:image" content="https://groomscan.com/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="es_ES">
 <meta property="og:locale:alternate" content="en_GB">
 <meta property="og:site_name" content="GroomScan">
@@ -21,9 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"GroomScan","applicationCategory":"BusinessApplication","operatingSystem":"Web, Shopify, WooCommerce","url":"https://groomscan.com/","description":"Escáner de peinados con IA para tiendas de productos de peluquería y barbería: recomienda la rutina de productos del catálogo de la tienda a partir de una foto.","offers":[{"@type":"Offer","name":"Free","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Starter","price":"29","priceCurrency":"USD"},{"@type":"Offer","name":"Business","price":"79","priceCurrency":"USD"},{"@type":"Offer","name":"Pro","price":"199","priceCurrency":"USD"}]}
-</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://groomscan.com/#org", "name": "GroomScan", "url": "https://groomscan.com/", "logo": "https://groomscan.com/og.png", "email": "hola@groomscan.com"}, {"@type": "WebSite", "@id": "https://groomscan.com/#web", "url": "https://groomscan.com/", "name": "GroomScan", "inLanguage": ["es", "en"], "publisher": {"@id": "https://groomscan.com/#org"}}, {"@type": "SoftwareApplication", "@id": "https://groomscan.com/#app", "name": "GroomScan", "applicationCategory": "BusinessApplication", "applicationSubCategory": "E-commerce product recommendation", "operatingSystem": "Web, Shopify, WooCommerce", "url": "https://groomscan.com/", "image": "https://groomscan.com/og.png", "inLanguage": "es", "publisher": {"@id": "https://groomscan.com/#org"}, "description": "Escáner de peinados con IA para tiendas de productos de peluquería y barbería: el cliente sube la foto del peinado que quiere y recibe la rutina de productos del catálogo de la tienda, lista para comprar.", "featureList": ["Recomendación de productos a partir de una foto", "Añade la rutina al carrito en un clic", "Se adapta a la marca de cada tienda", "Seis idiomas", "No guarda las fotos"], "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Starter", "price": "29", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Business", "price": "79", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Pro", "price": "199", "priceCurrency": "USD"}]}]}</script>
 <style>
 :root{
   --black:#000;
@@ -713,7 +714,7 @@ footer .made{margin-left:auto}
   for(var k in ES_EXTRA)T.es[k]=ES_EXTRA[k];
 
   var lang='es';
-  try{var sv=localStorage.getItem('gs-lang');if(sv==='en'||sv==='es')lang=sv;else if(!sv&&!/^es\b/i.test(navigator.language||'es'))lang='en'}catch(e){}
+  if(/^\/en(\/|$)/.test(location.pathname))lang='en';
   try{var qp=new URLSearchParams(location.search).get('lang');if(qp==='en'||qp==='es')lang=qp}catch(e){}
   function t(k){return (T[lang]&&T[lang][k]!=null)?T[lang][k]:T.es[k]}
   function apply(){
@@ -727,9 +728,7 @@ footer .made{margin-left:auto}
     b.setAttribute('aria-label',lang==='en'?'Cambiar a español':'Switch to English');
     renderTicket(cur,false);calc();
   }
-  document.getElementById('langBtn').addEventListener('click',function(){lang=lang==='es'?'en':'es';var saved=false;try{localStorage.setItem('gs-lang',lang);saved=localStorage.getItem('gs-lang')===lang}catch(e){}
-    /* the demo scanner reads the language once when it loads: reload so it restarts in the new language */
-    if(saved){location.reload()}else{var u=new URL(location.href);u.searchParams.set('lang',lang);location.href=u.toString()}});
+  document.getElementById('langBtn').addEventListener('click',function(){location.href=(lang==='es'?'/en/':'/')+location.hash});
 
   /* ---------- hero scanner ---------- */
   var STYLES=[

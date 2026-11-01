@@ -1,0 +1,10 @@
+# GroomScan
+
+> AI hairstyle scanner for online hair and grooming stores (Shopify, WooCommerce and any website). A shopper uploads a photo of the hairstyle they want and, in seconds, gets a product routine built from that store's own catalogue, added to the cart in one click.
+
+- Web: https://groomscan.com/en/ (English) · https://groomscan.com/ (Spanish) · Contact: hola@groomscan.com
+- Who it is for: stores that sell hair styling and barber products to the public (waxes, clays, powders, sprays, aftershaves, tools).
+- How it works: one installation step, no code to maintain; the widget takes the store's logo and colours; recommendations come only from the store's catalogue and can prioritise chosen products.
+- Languages: six. Privacy: uploaded photos are not stored.
+- Plans (USD/month): Free (up to 50 scans/month), Starter 29, Business 79, Pro 199. Brands and large stores by contract.
+- Made in Spain by barbers.
