@@ -30,7 +30,7 @@ jobs:
         if: steps.creds.outputs.ok == 'true'
         run: |
           mkdir -p dist
-          cp _headers index.html configurador.html privacidad.html widget.js screencast.mp4 dist/
+          cp _headers index.html configurador.html privacidad.html widget.js screencast.mp4 og.png robots.txt sitemap.xml llms.txt dist/ && cp -r en dist/
       - name: Deploy to Cloudflare Pages (production)
         if: steps.creds.outputs.ok == 'true'
         env:
@@ -41,4 +41,4 @@ jobs:
         if: steps.creds.outputs.ok == 'true'
         run: |
           sleep 20
-          curl -fsS https://groomscan.com/ | grep -q "Sé de las primeras tiendas" && echo "groomscan.com is live with the new version"
+          curl -fsS https://groomscan.com/ | grep -q "hreflang" && echo "groomscan.com is live with the new version"
